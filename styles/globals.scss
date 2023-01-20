@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "fonts";
+@import "tab";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: black;
+}
+
+.container {
+  @apply max-w-[1400px] m-auto 
+ /* max-width: 1400px;
+  margin: auto;
+  @media screen and (max-width: 1400px) {
+    padding: 0 20px;  
+  } */;
+}
