@@ -10,6 +10,8 @@ import Factorys from "../components/factory";
 import Products from "../components/products";
 import Slide from "../components/slide";
 import Whychooseus from "../components/whychooseus";
+import Exprience from "../components/exprience";
+import Swot from "../components/swot";
 
 function Home() {
   return (
@@ -17,8 +19,10 @@ function Home() {
       <div className="space-y-32">
         <Slide />
         <Whychooseus />
-        <Affiliations />
+        <Exprience/>
         <Products />
+        <Affiliations />
+        <Swot/>
         <Clients />
         <Factorys />
         <Client_think_about_us />

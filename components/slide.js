@@ -39,27 +39,7 @@ const data = [
   },
 ];
 const Slide = () => {
-  // const CustomLeftArrow = ({ onClick }) => {
-  //     return (
-  //       <IconButton
-  //         style={{ pointer: "cursor", htmlColor: "red" }}
-  //         onClick={onClick}
-  //       >
-  //         <ArrowLeftIcon />
-  //       </IconButton>
-  //     );
-  //   };
 
-  //   const CustomRightArrow = ({ onClick }) => {
-  //     return (
-  //       <IconButton
-  //         style={{ pointer: "cursor", htmlColor: "red" }}
-  //         onClick={onClick}
-  //       >
-  //         <ArrowRight />
-  //       </IconButton>
-  //     );
-  // };
 
   return (
     <div className="w-full">
