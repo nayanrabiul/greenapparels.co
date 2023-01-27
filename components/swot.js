@@ -12,6 +12,7 @@ const Swot = () => {
 
                 <Image
                     src={'/swot/swot.svg'}
+
                     alt="logo"
                     className="w-[70%] "
                     width={1}
