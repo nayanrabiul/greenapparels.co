@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 
 const Clients = () => {
   return (
-    <div className="bg-[#C1C1C1]">
+    <div className="bg-[#C1C1C1] py-16 md:py-32">
       <div className="container p-4">
         <h2>Our Cliets</h2>
         <div className="w-full">

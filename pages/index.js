@@ -13,24 +13,26 @@ import Whychooseus from "../components/whychooseus";
 import Exprience from "../components/exprience";
 import Swot from "../components/swot";
 
+
 function Home() {
-  return (
-    <Layout>
-      <div className="space-y-32">
-        <Slide />
-        <Whychooseus />
-        <Exprience/>
-        <Products />
-        <Affiliations />
-        <Swot/>
-        <Clients />
-        <Factorys />
-        <Client_think_about_us />
-        <Contactus />
-        <Csr />
-      </div>
-    </Layout>
-  );
+
+    return (
+        <Layout>
+
+                <Slide id={'slide'}/>
+                <Whychooseus id={'Whychooseus'}/>
+                <Exprience id={'Exprience'}/>
+                <Products id={'Products'}/>
+                <Affiliations id={'Affiliations'}/>
+                <Swot id={'Swot'}/>
+                <Clients id={'Clients'}/>
+                <Factorys id={'Factorys'}/>
+                <Client_think_about_us id={'Client_think_about_us'}/>
+                <Contactus id={'Contactus'}/>
+                <Csr id={'Csr'}/>
+
+        </Layout>
+    );
 }
 
 export default Home;

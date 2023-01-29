@@ -30,13 +30,13 @@ const data = [
 
 const Whychooseus = () => {
   return (
-    <div className="w-full mt-12">
-      <div className="container text-white ">
-        <h2 className="text-center text-[#395144]  md:text-6xl md:font-bold  md:mt-16 lg:mt-20">Why Choose Us</h2>
+    <div className="w-full py-16 md:py-32" id={'Whychooseus'}>
+      <div className="container ">
+        <h1 className="text-center text-first py-4">Why Choose Us</h1>
 
-        <div className="py-4 md:py-8 lg:p-8 flex flex-wrap justify-center">
+        <div className="md:p-8 flex flex-wrap justify-center">
           {data.map((item, index) => (
-            <div className="w-1/2  p-2 flex flex-col items-center space-y-4 text-center" key={index}>
+            <div className="w-1/2  py-6 flex flex-col items-center space-y-4 " key={index}>
               <Image
                 src={item.icon}
                 alt="logo"
@@ -44,8 +44,8 @@ const Whychooseus = () => {
                 width={1}
                 height={1}
               />
-              <h4  className={'text-center text-[#AA8B56]'}>{item.title}</h4>
-              <p className="w-[65%] text-center text-[#F0EBCE]">{item.description}</p>
+              <h3  className={'text-center text-second'}>{item.title}</h3>
+              <p className="w-[65%] text-center text-third">{item.description}</p>
             </div>
           ))}
         </div>

@@ -32,7 +32,7 @@ const data = [
 ];
 const Factorys = () => {
   return (
-    <div className="w-full">
+    <div className="w-full py-16 md:py-32">
       <Carousel
         additionalTransfrom={0}
         arrows

@@ -2,7 +2,7 @@ import React from "react";
 
 const Client_think_about_us = () => {
   return (
-    <div className="w-full mt-16 ">
+    <div className="w-full py-16 md:py-32 ">
       <div className="container text-white space-y-8 text-white">
         <h2 className="text-center">What the People Thinks About Us</h2>
         <div className="py-8  flex flex-wrap justify-center">

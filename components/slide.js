@@ -42,7 +42,7 @@ const Slide = () => {
 
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <Carousel
         additionalTransfrom={0}
         arrows

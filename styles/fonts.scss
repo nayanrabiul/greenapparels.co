@@ -1,40 +1,19 @@
 h1 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 100px;
+
+  @apply font-[700] text-6xl
 }
 
 
 h2 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 38px;
-  line-height: 46px;
+  @apply font-[700] text-4xl
 }
+
 h3 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
+  @apply font-[600] text-2xl
 }
-h4 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-}
-h5 {
-  font-style: "Inter";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-}
+
+
+
 p {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 26px;
+ @apply font-normal
 }

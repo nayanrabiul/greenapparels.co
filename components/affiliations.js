@@ -49,7 +49,7 @@ const Affiliations = () => {
     };
 
     return (
-        <div className="w-full mt-16 bg-[#001201] ">
+        <div className="w-full  bg-[#001201] py-16 md:py-32 " id={'Affiliations'}>
             <div className="container text-white py-8">
                 <h2 className="text-center text-[#395144]  md:text-6xl md:font-bold  md:mt-16 lg:mt-20">Our Affiliated
                     Manufactureing Units </h2>

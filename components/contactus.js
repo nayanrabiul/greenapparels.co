@@ -2,7 +2,7 @@ import React from "react";
 
 const Contactus = () => {
   return (
-    <div className="text-white">
+    <div className="text-white py-16 md:py-32" id={'Contactus'}>
       <div className="container mx-auto my-4 px-4 lg:px-20 flex justify-center items-center ">
         <div className="w-full p-8 my-4 md:px-12 lg:w-9/12  rounded-2xl shadow-2xl">
           <div className="flex">
