@@ -100,8 +100,8 @@ const Slide = () => {
               />
             </div>
             <div className="absolute w-full h-full px-[16%]  top-0 flex flex-col items-left justify-center">
-              <h1 className="text-white">{slide.title}</h1>
-              <h3 className=" text-white">{slide.description}</h3>
+              <h1 className="text-third">{slide.title}</h1>
+              <h3 className=" text-second">{slide.description}</h3>
             </div>
           </div>
         ))}
