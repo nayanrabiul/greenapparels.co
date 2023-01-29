@@ -51,7 +51,7 @@ const Nav = () => {
             } text-second `}
         >
 
-            <nav className="container p-2 flex justify-between items-center">
+            <nav  className="container p-2 flex justify-between items-center">
                 {/* for desktop */}
                 <div className="container p-2 flex justify-between items-center">
                     <Image
