@@ -36,9 +36,10 @@ const Exprience = () => {
                 <div className={'flex flex-wrap'}>
 
 
-                    <div className={' w-full md:w-[37%] flex justify-center items-center '}>
-                        <h2 className=" mb-12 md:m-8 border-b-4 md:border-l-4 md:border-b-0 border-third  text-left text-[#0E2007] md:text-5xl md:font-bold px-8 py-4 ">10
+                    <div className={' w-full md:w-[37%] flex flex-col justify-center items-center '}>
+                        <h2 className="  border-b-4 md:border-l-4 md:border-b-0 border-third  text-left text-[#0E2007] md:text-5xl md:font-bold px-8 py-4 ">10
                             + years of <br/> EXPRIENCE </h2>
+                        <p className={'text-third text-center mb-12 md:m-8 w-[70%]'}> We provide World Class solluton Unmatched to any other company</p>
                     </div>
 
 
@@ -48,7 +49,7 @@ const Exprience = () => {
                             <div
                                 className="  bg-[#19320F]  border border-gray-500 rounded-lg drop-shadow-xl hover:bg-[#18220F]  flex items-center justify-start">
                                 <div className={' h-full w-full flex flex-col justify-center items-center p-4'}>
-                                    <h2 className="font-bold text-xl  text-second h-full">Imported Machine</h2>
+                                    <h2 className="font-bold text-xl text-center  text-second h-full">Imported Machine</h2>
                                     <h2 className="font-bold text-third w-full text-center">60+</h2>
                                 </div>
                             </div>

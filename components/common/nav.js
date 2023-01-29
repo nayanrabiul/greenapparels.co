@@ -54,7 +54,13 @@ const Nav = () => {
             <nav className="container p-2 flex justify-between items-center">
                 {/* for desktop */}
                 <div className="container p-2 flex justify-between items-center">
-                    <h3>Greeen Apparels</h3>
+                    <Image
+                        src={'/nav/logo.png'}
+                        alt="logo"
+                        className="w-48 h-16 object-cover"
+                        width={512}
+                        height={512}
+                    />
 
                     <div className="hidden md:block">
                         <ul className="flex flex-row justify-center items-end space-x-3">
