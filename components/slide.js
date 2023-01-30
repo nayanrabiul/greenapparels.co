@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 
-
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const data = [
   {
@@ -38,56 +40,24 @@ const data = [
     image: "/slide/suits.jpg",
   },
 ];
+const settings = {
+
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1800,
+  pauseOnHover: false
+};
 const Slide = () => {
 
 
-  return (
-    <div className="w-full ">
-      <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlay
-        autoPlaySpeed={2400}
-        centerMode={false}
-        className=""
-        containerClass="container-with-dots"
-        dotListClass=""
-        focusOnSelect={false}
-        infinite
-        itemClass=""
-        minimumTouchDrag={80}
-        customLeftArrow={<div />}
-        customRightArrow={<div />}
-        renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        rewind={false}
-        rewindWithAnimation={false}
-        rtl={false}
-        pauseOnHover={false}
-        shouldResetAutoplay
-        showDots
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 1,
-          },
 
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: 1,
-          },
-        }}
-      >
+  return (
+    <div className="w-full">
+      <Slider {...settings}>
+
         {data.map((slide, index) => (
           <div className="w-full z-10 relative" key={index}>
             <div className="relative w-full rounded-md overflow-hidden">
@@ -99,13 +69,14 @@ const Slide = () => {
                 width={600}
               />
             </div>
-            <div className="absolute w-full h-full px-[16%]  top-0 flex flex-col items-left justify-center">
-              <h1 className="text-third">{slide.title}</h1>
+            <div className="absolute w-full h-full p-[16%]  top-0 flex flex-col items-left justify-center">
+              <h1 className="text-third mt-32">{slide.title}</h1>
               <h3 className=" text-second">{slide.description}</h3>
             </div>
           </div>
         ))}
-      </Carousel>
+
+      </Slider>
     </div>
   );
 };

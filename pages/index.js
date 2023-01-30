@@ -18,7 +18,6 @@ function Home() {
 
     return (
         <Layout>
-
                 <Slide id={'slide'}/>
                 <Whychooseus id={'Whychooseus'}/>
                 <Exprience id={'Exprience'}/>
@@ -30,7 +29,6 @@ function Home() {
                 <Client_think_about_us id={'Client_think_about_us'}/>
                 <Contactus id={'Contactus'}/>
                 <Csr id={'Csr'}/>
-
         </Layout>
     );
 }
