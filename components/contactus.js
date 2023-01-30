@@ -10,22 +10,22 @@ const Contactus = () => {
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
             <input
-              className="w-full bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-fourth text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
               placeholder="First Name*"
             />
             <input
-              className="w-full bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-fourth text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
               placeholder="Last Name*"
             />
             <input
-              className="w-full bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-fourth text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="email"
               placeholder="Email*"
             />
             <input
-              className="w-full bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full bg-fourth text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="number"
               placeholder="Phone*"
             />
@@ -33,12 +33,12 @@ const Contactus = () => {
           <div className="my-4">
             <textarea
               placeholder="Message*"
-              className="w-full h-32 bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full h-32 bg-fourth text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             ></textarea>
           </div>
           <div className="my-2 w-1/2 lg:w-1/4">
             <button
-              className="uppercase text-sm font-bold tracking-wide bg-first text-third p-3 rounded-lg w-full
+              className="uppercase text-sm font-bold tracking-wide bg-fourth text-third p-3 rounded-lg w-full
                       focus:outline-none focus:shadow-outline"
             >
               Send Message

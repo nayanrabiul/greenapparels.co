@@ -17,7 +17,7 @@ const settings = {
 
     dots: true,
     infinite: true,
-    slidesToShow:4,
+    slidesToShow:5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1800,
@@ -30,8 +30,9 @@ const settings = {
 const Csr = () => {
     return (
         <div className=" py-8 md:py-16">
-            <div className="container ">
-                <h2 className={'text-first text-center my-4'}>Our Cliets</h2>
+            <div className=" ">
+                <h1 className="text-center text-first py-4">CSR</h1>
+
                 <div className="w-full">
                     <Slider {...settings}>
                         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (

@@ -71,8 +71,9 @@ const Products = () => {
                         variants={fadeIn('right', 'tween', 0.2, 1)}
                     >
 
-                        <h2 className="text-center text-[#395144] my-4  md:text-6xl md:font-bold  md:mt-16 lg:mt-20">Our
-                            Products</h2>
+                        <h1 className="text-center text-first py-4">Our
+                            Products</h1>
+
 
                     </motion.div>
 

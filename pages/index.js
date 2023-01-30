@@ -23,12 +23,12 @@ function Home({false_data}) {
             <Exprience id={'Exprience'}/>
             <Products id={'Products'}/>
             <Affiliations id={'Affiliations'}/>
+            <Csr id={'Csr'}/>
+            <Factorys id={'Factorys'}/>
             <Swot id={'Swot'}/>
             <Clients id={'Clients'}/>
-            <Factorys id={'Factorys'}/>
-            <Client_think_about_us id={'Client_think_about_us'}/>
             <Contactus id={'Contactus'}/>
-            <Csr id={'Csr'}/>
+            <Client_think_about_us id={'Client_think_about_us'}/>
         </Layout>
     );
 }

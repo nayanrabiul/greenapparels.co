@@ -71,24 +71,24 @@ const Nav = () => {
 
     return (
         <div
-            className={`fixed z-50 w-full ${
-                nav_color_change ? "bg-[#000000] opacity-90" : "opacity-100"
+            className={`fixed z-50 w-full bg-[#000000] ${
+                nav_color_change ? "bg-opacity-80" : "bg-opacity-20"
             } text-second `}
         >
 
-            <nav  className="container p-2 flex justify-between items-center">
+            <nav  className="container p-0 flex justify-between items-center">
                 {/* for desktop */}
-                <div className="container p-2 flex justify-between items-center">
+                <div className="w-full py-1 flex justify-between items-center">
                     <Image
                         src={'/nav/logo.png'}
                         alt="logo"
-                        className="w-48 h-16 object-cover"
+                        className="w-16 h-12 md:w-28 md:h-20 object-contain"
                         width={512}
                         height={512}
                     />
 
                     <div className="hidden md:block">
-                        <ul className="flex flex-row justify-center items-end space-x-3">
+                        <ul className="flex flex-row justify-end items-center space-x-3">
                             {data.map((item, index) => (
                                 <li key={index}>
                                     <Link href={item.hash_link}>{item.title}</Link>

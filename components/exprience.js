@@ -39,9 +39,9 @@ const Exprience = () => {
                             className={' w-full md:w-[37%] flex flex-col justify-center items-center '}
                         >
 
-                            <h2 className="  border-b-4 md:border-l-4 md:border-b-0 border-third  text-left text-[#0E2007] md:text-5xl md:font-bold px-8 py-4 ">10
-                                + years of <br/> EXPRIENCE </h2>
-                            <p className={'text-third text-center mb-12 md:m-8 w-[70%]'}> We provide World Class
+                            <h3 className="  border-b-4 md:border-l-4 md:border-b-0 border-third drop-shadow-lg shadow-th text-left text-[#0E2007] md:text-5xl md:font-bold px-8 py-4 ">10
+                                + years of <br /> <span className={'text-6xl'}>EXPRIENCE</span> </h3>
+                            <p className={'text-third text-center mt-3 mb-12 md:m-8 w-[70%]'}> We provide World Class
                                 solluton Unmatched to any other company</p>
 
                         </motion.div>

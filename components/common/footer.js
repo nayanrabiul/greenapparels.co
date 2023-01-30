@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       <footer className=" black text-third m-2 border border-third rounded-xl mt-16 md:mt-32">
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-          <h1 className="text-second">Green Apparels</h1>
+          <h1 className="text-second my-4">Green Apparels</h1>
           <div className="lg:flex lg:items-start lg:gap-8">
             <div className="grid grid-cols-2 gap-8 mt-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
               <div className="col-span-2">
@@ -30,7 +30,7 @@ const Footer = () => {
 
                   <div className="p-2 border rounded-xl border-gray-100 focus-within:ring  sm:flex sm:items-center sm:gap-4 space-y-4">
                     <input
-                        className="w-full bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        className="w-full bg-fourth text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                         type="email"
                         placeholder="Email*"
                     />

@@ -51,8 +51,8 @@ const Affiliations = () => {
     return (
         <div className="w-full  bg-[#001201] py-16 md:py-32 " id={'Affiliations'}>
             <div className="container text-white py-8">
-                <h2 className="text-center text-[#395144]  md:text-6xl md:font-bold  md:mt-16 lg:mt-20">Our Affiliated
-                    Manufactureing Units </h2>
+                <h1 className="text-center text-first py-4">Our Manufactureing Units</h1>
+
                 {/* company logo and tab  */}
 
                 <div className="my-8 flex flex-col justify-center items-center space-x-8">

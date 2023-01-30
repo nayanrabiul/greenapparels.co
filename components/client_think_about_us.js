@@ -4,9 +4,11 @@ const Client_think_about_us = () => {
   return (
     <div className="w-full py-16 md:py-32 ">
       <div className="container text-white space-y-8 text-white">
-        <h2 className="text-center text-first">What the People Thinks About Us</h2>
 
-          <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-third w-[80%] mx-auto md:w-[65%] text-center">
+        <h1 className="text-center text-first py-4">What the People Thinks About Us</h1>
+
+
+        <p className="mb-6 pb-2 md:mb-12 md:pb-0 text-third w-[80%] mx-auto md:w-[65%] text-center">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
             iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum
             porro a pariatur veniam.
