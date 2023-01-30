@@ -8,8 +8,8 @@ const Sub_Products = ({item}) => {
     const [hoverdiv, setHoverDiv] = useState(false);
     return (
 
-        <div className="w-1/2 lg:w-1/3 p-2 md:p-4 flex flex-col justify-center items-center ">
-            <div className={'w-full'}></div>
+        <div className=" p-2 md:p-4 flex flex-col justify-center items-center ">
+
             {!hoverdiv ?
                 <motion.div
                     variants={fadeIn('up', 'tween', 0.3, 1)}
