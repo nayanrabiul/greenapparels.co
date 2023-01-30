@@ -48,7 +48,8 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 1800,
-  pauseOnHover: false
+  pauseOnHover: false,
+  arrows: false
 };
 const Slide = () => {
 
