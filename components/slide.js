@@ -7,6 +7,18 @@ import Link from "next/link";
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+const settings = {
+
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1800,
+  pauseOnHover: false,
+  arrows: false
+};
+
 
 const data = [
   {
@@ -40,17 +52,7 @@ const data = [
     image: "/slide/suits.jpg",
   },
 ];
-const settings = {
 
-  dots: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 1800,
-  pauseOnHover: false,
-  arrows: false
-};
 const Slide = () => {
 
 

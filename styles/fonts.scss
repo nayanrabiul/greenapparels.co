@@ -5,11 +5,15 @@ h1 {
 
 
 h2 {
-  @apply font-[700] text-4xl
+  @apply  font-[700] text-4xl
 }
 
 h3 {
   @apply font-[600] text-2xl
+}
+
+h4 {
+  @apply font-[600] text-xl
 }
 
 

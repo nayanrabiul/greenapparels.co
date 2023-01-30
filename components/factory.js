@@ -1,8 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+
+const settings = {
+
+  dots: true,
+  infinite: true,
+  slidesToShow:1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1800,
+  pauseOnHover: false,
+  arrows: false
+};
 
 const data = [
   {
@@ -33,50 +48,7 @@ const data = [
 const Factorys = () => {
   return (
     <div className="w-full py-16 md:py-32">
-      <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlay
-        autoPlaySpeed={2400}
-        centerMode={false}
-        className=""
-        containerClass="container-with-dots"
-        dotListClass=""
-        focusOnSelect={false}
-        infinite
-        itemClass=""
-        minimumTouchDrag={80}
-        customLeftArrow={<div />}
-        customRightArrow={<div />}
-        renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        rewind={false}
-        rewindWithAnimation={false}
-        rtl={false}
-        shouldResetAutoplay
-        showDots
-        factoryrClass=""
-        factorysTofactory={1}
-        swipeable
-        pauseOnHover={false}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 1,
-          },
-
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: 1,
-          },
-        }}
+      <Slider {...settings}
       >
         {data.map((factory, index) => (
           <div className="w-full z-10 relative" key={index}>
@@ -90,11 +62,11 @@ const Factorys = () => {
               />
             </div>
             <div className="absolute w-full h-full px-[16%]  top-0 flex flex-col items-left justify-center ">
-              <h1 className="text-white">{factory.title}</h1>
+              <h1 className="text-second shadow-2xl">{factory.title}</h1>
             </div>
           </div>
         ))}
-      </Carousel>
+      </Slider>
     </div>
   );
 };

@@ -3,18 +3,18 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="container black text-white">
+      <footer className=" black text-third m-2 border border-third rounded-xl mt-16 md:mt-32">
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-          <h1 className="text-white">Green Apparels</h1>
+          <h1 className="text-second">Green Apparels</h1>
           <div className="lg:flex lg:items-start lg:gap-8">
             <div className="grid grid-cols-2 gap-8 mt-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
               <div className="col-span-2">
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <h2 className="text-2xl font-bold text-third ">
                     Contact Us
                   </h2>
 
-                  <p className="mt-4 text-gray-500 dark:text-gray-400">
+                  <p className="mt-4  ">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Esse non cupiditate quae nam molestias.
                   </p>
@@ -28,15 +28,14 @@ const Footer = () => {
                     Email{" "}
                   </label>
 
-                  <div className="p-2 border border-gray-100 focus-within:ring dark:border-gray-800 sm:flex sm:items-center sm:gap-4">
+                  <div className="p-2 border rounded-xl border-gray-100 focus-within:ring  sm:flex sm:items-center sm:gap-4 space-y-4">
                     <input
-                      type="email"
-                      id="UserEmail"
-                      placeholder="john@rhcp.com"
-                      className="w-full border-none focus:border-transparent focus:ring-transparent dark:bg-gray-900 dark:text-white sm:text-sm"
+                        className="w-full bg-first text-third mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="email"
+                        placeholder="Email*"
                     />
 
-                    <button className="w-full px-6 py-3 mt-1 text-sm font-bold tracking-wide text-white uppercase transition-none rounded-lg border-2 border-white hover:bg-teal-600 sm:mt-0 sm:w-auto sm:flex-shrink-0">
+                    <button className=" w-[30%]  px-6 py-3 mt-1 text-sm font-bold tracking-wide  uppercase transition-none rounded-lg border-2 border-white hover:bg-teal-600 sm:mt-0 sm:w-auto sm:flex-shrink-0">
                       Contact Us
                     </button>
                   </div>
@@ -44,7 +43,7 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">
+                <p className="font-medium text-third ">
                   Services
                 </p>
 
@@ -53,7 +52,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         1on1 Coaching
                       </a>
@@ -62,7 +61,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Company Review
                       </a>
@@ -71,7 +70,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Accounts Review
                       </a>
@@ -80,7 +79,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         HR Consulting
                       </a>
@@ -89,7 +88,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         SEO Optimisation
                       </a>
@@ -99,7 +98,7 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">
+                <p className="font-medium text-third ">
                   Company
                 </p>
 
@@ -108,7 +107,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         About
                       </a>
@@ -117,7 +116,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Meet the Team
                       </a>
@@ -126,7 +125,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Accounts Review
                       </a>
@@ -136,7 +135,7 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">
+                <p className="font-medium text-third ">
                   Helpful Links
                 </p>
 
@@ -145,7 +144,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Contact
                       </a>
@@ -154,7 +153,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         FAQs
                       </a>
@@ -163,7 +162,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75"
                       >
                         Live Chat
                       </a>
@@ -173,7 +172,7 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">
+                <p className="font-medium text-third">
                   Legal
                 </p>
 
@@ -182,7 +181,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Accessibility
                       </a>
@@ -191,7 +190,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Returns Policy
                       </a>
@@ -200,7 +199,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Refund Policy
                       </a>
@@ -209,7 +208,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 "
                       >
                         Hiring Statistics
                       </a>
@@ -219,7 +218,7 @@ const Footer = () => {
               </div>
 
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900 dark:text-white">
+                <p className="font-medium text-third dark:">
                   Downloads
                 </p>
 
@@ -231,7 +230,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 dark:text-gray-200"
                       >
                         Marketing Calendar
                       </a>
@@ -240,7 +239,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className=" transition hover:opacity-75 dark:text-gray-200"
                       >
                         SEO Infographics
                       </a>
@@ -255,7 +254,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className=" transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">Facebook</span>
 
@@ -279,7 +278,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className=" transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">Instagram</span>
 
@@ -303,7 +302,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className=" transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">Twitter</span>
 
@@ -323,7 +322,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className=" transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">GitHub</span>
 
@@ -347,7 +346,7 @@ const Footer = () => {
                     href="/"
                     rel="noreferrer"
                     target="_blank"
-                    className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                    className=" transition hover:opacity-75 dark:text-gray-200"
                   >
                     <span className="sr-only">Dribbble</span>
 
@@ -371,7 +370,7 @@ const Footer = () => {
 
           <div className="pt-8 mt-8 border-t border-gray-100 dark:border-gray-800">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              <p className="text-xs text-left text-gray-500 dark:text-gray-400">
+              <p className="text-xs text-left  dark:text-gray-400">
                 &copy; 2022. Company Name. All rights reserved.
               </p>
 
@@ -380,7 +379,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                      className=" transition hover:opacity-75 dark:text-gray-400"
                     >
                       Terms & Conditions
                     </a>
@@ -389,7 +388,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                      className=" transition hover:opacity-75 dark:text-gray-400"
                     >
                       Privacy Policy
                     </a>
@@ -398,7 +397,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-500 transition hover:opacity-75 dark:text-gray-400"
+                      className=" transition hover:opacity-75 dark:text-gray-400"
                     >
                       Cookies
                     </a>

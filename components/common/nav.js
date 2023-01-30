@@ -1,18 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, {useCallback, useContext, useEffect, useState} from "react";
-import {useRouter} from "next/router";
-import Slide from "../slide";
-import Whychooseus from "../whychooseus";
+
 import Exprience from "../exprience";
 import Products from "../products";
 import Affiliations from "../affiliations";
-import Swot from "../swot";
-import Clients from "../clients";
-import Factorys from "../factory";
-import Client_think_about_us from "../client_think_about_us";
-import Contactus from "../contactus";
-import Csr from "../csr";
+
+import { motion } from "framer-motion"
+
+const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+}
+
+
+const variants_mobile_nav_ul = {
+    open: {
+        transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+    },
+    closed: {
+        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
+};const variants_mobile_nav_li = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            y: { stiffness: 1000, velocity: -100 }
+        }
+    },
+    closed: {
+        y: 50,
+        opacity: 0,
+        transition: {
+            y: { stiffness: 1000 }
+        }
+    }
+};
+
 
 const Nav = () => {
     const [toggle, setToggle] = useState(false);
@@ -86,13 +111,15 @@ const Nav = () => {
                     />
 
                     {/* this is mobile secton */}
-                    <div
+
+                    <motion.nav
+                        animate={toggle ? "open" : "closed"}  variants={variants}
                         className={` ${
-                            !toggle ? "hidden" : "block"
-                        }  fixed top-0  w-full h-screen bg-[#000000]  `}
+                            !toggle ? "hidden" : "fixed"
+                        }   top-0 right-0 left-0  h-screen bg-[#000000]  `}
                     >
                         <div className="flex flex-col justify-center items-center p-4 py-16">
-                            <div className="hover:border rounded-full border-white">
+                            <div className="border rounded-full border-white p-4">
                                 <Image
                                     src={"/nav/close.svg"}
                                     alt="menu"
@@ -102,15 +129,25 @@ const Nav = () => {
                                     onClick={() => setToggle(!toggle)}
                                 />
                             </div>
-                            <ul className=" flex flex-col justify-center items-end space-x-3 text-3xl text-white mt-8 space-y-8">
+                            <motion.ul variants={variants_mobile_nav_ul} className=" flex flex-col justify-center items-center space-x-3 text-3xl text-second mt-8 space-y-8">
                                 {data.map((item, index) => (
-                                    <li key={index}>
-                                        <Link href={item.hash_link} onClick={() => setToggle(false)}>{item.title}</Link>
-                                    </li>
+
+                                    <motion.li
+                                        variants={variants_mobile_nav_li}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        key={index}
+                                    >
+                                        <Link  href={item.hash_link} onClick={() => setToggle(false)}> {item.title}</Link>
+                                    </motion.li>
+
+
+
                                 ))}
-                            </ul>
+                            </motion.ul>
+
                         </div>
-                    </div>
+                    </motion.nav>
                 </div>
             </nav>
         </div>
