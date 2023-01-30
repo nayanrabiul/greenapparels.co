@@ -16,12 +16,13 @@ const Sub_Products = ({item}) => {
 
                     className={` h-[200px] md:h-[300px] object-cover rounded-lg  producti`}
                     onMouseEnter={() => setHoverDiv(true)}
+                    onClick={() => setHoverDiv(true)}
                     initial={{opacity: 1}}
                     exit={{opacity: 0, transition: {duration: 0.2}}}
                 >
                     <Image
                         src={item.image}
-                        className={'h-[200px] md:h-[300px]'}
+                        className={'h-[200px] md:h-[300px] rounded-xl'}
                         alt="alt"
                         height={300}
                         width={300}
@@ -36,9 +37,13 @@ const Sub_Products = ({item}) => {
                     initial={{opacity: 1}}
                     exit={{opacity: 0, transition: {duration: 0.2}}}
                     onMouseOut={() => setHoverDiv(false)}
+                    onClick={() => setHoverDiv(false)}
                     className={'h-[200px] md:h-[300px] flex flex-col justify-center items-center'}
                 >
-                    <p className={'text-second text-center px-4 py-2 hidden lg:block'}> {item.description_hover} </p>
+                    <div className={'h-[300px] md:max-w-[80%] text-second text-center p-1  md:px-4 md:py-2 overflow-hidden border border-third rounded-xl'} >
+                       <h3 className={'text-third'}>Titile</h3>
+                        <p>{item.description_hover} </p>
+                    </div>
 
                 </motion.div>
 

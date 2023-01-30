@@ -5,21 +5,16 @@ import React from "react";
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
-
-const settings = {
-
-    dots: true,
-    infinite: true,
-    slidesToShow:5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1800,
-    pauseOnHover: false,
-    arrows: false
-};
-
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow:4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1800,
+        pauseOnHover: false,
+        arrows: false
+    };
 
 
 const Clients = () => {
@@ -28,7 +23,7 @@ const Clients = () => {
       <div className="container p-4">
         <h2 className={'text-first text-center my-4'}>Our Cliets</h2>
         <div className="w-full">
-      <Slider {...settings}>
+      <Slider {...settings }>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((i) => (
               <div className="p-4 mb-5" key={i}>
                 <Image

@@ -14,23 +14,33 @@ import Exprience from "../components/exprience";
 import Swot from "../components/swot";
 
 
-function Home() {
+function Home({false_data}) {
 
     return (
         <Layout>
-                <Slide id={'slide'}/>
-                <Whychooseus id={'Whychooseus'}/>
-                <Exprience id={'Exprience'}/>
-                <Products id={'Products'}/>
-                <Affiliations id={'Affiliations'}/>
-                <Swot id={'Swot'}/>
-                <Clients id={'Clients'}/>
-                <Factorys id={'Factorys'}/>
-                <Client_think_about_us id={'Client_think_about_us'}/>
-                <Contactus id={'Contactus'}/>
-                <Csr id={'Csr'}/>
+            <Slide id={'slide'}/>
+            <Whychooseus id={'Whychooseus'}/>
+            <Exprience id={'Exprience'}/>
+            <Products id={'Products'}/>
+            <Affiliations id={'Affiliations'}/>
+            <Swot id={'Swot'}/>
+            <Clients id={'Clients'}/>
+            <Factorys id={'Factorys'}/>
+            <Client_think_about_us id={'Client_think_about_us'}/>
+            <Contactus id={'Contactus'}/>
+            <Csr id={'Csr'}/>
         </Layout>
     );
+}
+
+export async function getStaticProps() {
+
+    const false_data = {}
+    return {
+        props: {
+            false_data
+        },
+    }
 }
 
 export default Home;

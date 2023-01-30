@@ -371,7 +371,7 @@ const Footer = () => {
           <div className="pt-8 mt-8 border-t border-gray-100 dark:border-gray-800">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <p className="text-xs text-left  dark:text-gray-400">
-                &copy; 2022. Company Name. All rights reserved.
+                &copy; 2023. <span className={'font-bold text-xl'}>Green Apparenls </span>  All rights reserved.
               </p>
 
               <nav aria-label="Footer Navigation - Support">
