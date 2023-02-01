@@ -42,7 +42,7 @@ const Whychooseus = () => {
                     className={` mx-auto flex flex-col`}
                 >
                     <h1 className="text-center text-first py-4">Why Choose Us</h1>
-                    <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>In short, our clients' satisfaction and belief in our products is the foundation of our business, and we are committed to making it a priority in everything we do.</h4>
+                    <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>In short, our clients satisfaction and belief in our products is the foundation of our business, and we are committed to making it a priority in everything we do.</h4>
 
                         <div className="md:p-8 flex flex-wrap justify-center">
                             {data.map((item, index) => (
