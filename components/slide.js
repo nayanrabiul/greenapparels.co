@@ -65,11 +65,11 @@ const Slide = () => {
           <div className="w-full z-10 relative" key={index}>
             <div className="relative w-full rounded-md overflow-hidden">
               <Image
-                className="w-full h-[444px] lg:h-[600px]  object-cover"
+                className="w-full h-96  object-cover"
                 src={slide.image}
                 alt="alt"
-                height={500}
-                width={600}
+                height={1023}
+                width={1024}
               />
             </div>
             <div className="absolute w-full h-full p-[16%]  top-0 flex flex-col items-left justify-center">

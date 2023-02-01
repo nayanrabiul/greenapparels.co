@@ -6,13 +6,16 @@ import {motion} from 'framer-motion';
 
 
 import {planetVariants, staggerContainer, fadeIn} from '../utils/motion';
+import AnimatedCounter from "./animated_number_counter";
 
 
 const data = [
-    {title: "Imorted Machines", number: "30+"},
-    {title: "Clients we Served", number: "30+"},
-    {title: "Smapling Section", number: "30+"},
-    {title: "Recuring clients", number: "30+"},
+
+
+    {title: "Recuring clients", number: 97},
+    {title: "Clients we Served", number: 200},
+    {title: "Smapling Section", number: 30},
+    {title: "Imorted Machines", number: 354},
 
 ]
 const Exprience = () => {
@@ -38,12 +41,17 @@ const Exprience = () => {
                             variants={fadeIn('right', 'tween', 0.2, 1)}
                             className={' w-full md:w-[37%] flex flex-col justify-center items-center '}
                         >
+                            <div className={'w-full flex flex-col justify-center items-center text-third'}>
+                                <AnimatedCounter countTo={10} duration={1500 }/>
+                                <h3 className=" border-third drop-shadow-lg shadow-th text-left text-[#0E2007] md:text-5xl md:font-bold px-8 py-4 flex">
+                                    years of
 
-                            <h3 className="  border-b-4 md:border-l-4 md:border-b-0 border-third drop-shadow-lg shadow-th text-left text-[#0E2007] md:text-5xl md:font-bold px-8 py-4 ">10
-                                + years of <br /> <span className={'text-6xl'}>EXPRIENCE</span> </h3>
-                            <p className={'text-third text-center mt-3 mb-12 md:m-8 w-[70%]'}> We provide World Class
-                                solluton Unmatched to any other company</p>
-
+                                </h3>
+                                <span className={'text-6xl border-b-4 text-main font-bold'}>EXPRIENCE</span>
+                                <p className={'text-main text-center mt-3 mb-12 md:m-8 w-[70%]'}> We provide World
+                                    Class
+                                    solluton Unmatched to any other company</p>
+                            </div>
                         </motion.div>
 
 
@@ -52,11 +60,17 @@ const Exprience = () => {
                                 {data.map((item, index) => (
 
                                     <motion.div key={index}
-                                        variants={fadeIn('up', 'spring', index * 0.5, 1)}
-                                        className=" md:p-6 p-3 bg-[#19320F] border border-gray-500  rounded-lg drop-shadow-xl hover:bg-[#18220F] justify-center items-center text-center"
+                                                variants={fadeIn('up', 'spring', (index + 1) * 0.5, 1)}
+                                                className=" md:p-6 p-3 bg-[#19320F] border border-gray-500  rounded-lg drop-shadow-xl hover:bg-[#18220F] justify-center items-center text-center"
                                     >
                                         <h3 className="font-bold  text-second">{item.title}</h3>
-                                        <h2 className="font-bold text-third">{item.number}</h2>
+                                        <h2 className="font-bold text-third ">
+
+                                            <AnimatedCounter countTo={item.number}
+                                                             duration={2000 + (index + 1) * 1000}/>
+
+
+                                        </h2>
 
                                     </motion.div>
                                 ))}

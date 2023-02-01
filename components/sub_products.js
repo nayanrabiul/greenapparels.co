@@ -8,7 +8,7 @@ const Sub_Products = ({item}) => {
     const [hoverdiv, setHoverDiv] = useState(false);
     return (
 
-        <div className=" p-2 md:p-4 flex flex-col justify-center items-center ">
+        <div className=" p-2 md:p-4 flex flex-col justify-center items-center text-center ">
 
             {!hoverdiv ?
                 <motion.div
@@ -41,16 +41,16 @@ const Sub_Products = ({item}) => {
                     className={'h-[200px] md:h-[300px] flex flex-col justify-center items-center'}
                 >
                     <div className={'h-[300px] md:max-w-[80%] text-second text-center p-1  md:px-4 md:py-2 overflow-hidden border border-third rounded-xl'} >
-                       <h3 className={'text-third'}>Titile</h3>
-                        <p>{item.description_hover} </p>
+                       <h3 className={'text-third text-center text-center'}>{item.title}</h3>
+                        <p className={'md:text-md text-center'}>{item.description_hover} </p>
                     </div>
 
                 </motion.div>
 
             }
 
-            <h3 className={'text-[#AA8B56]'}>{item.title}</h3>
-            <p className={'text-[#F0EBCE]'}>{item.description}</p>
+            <h3 className={'text-[#AA8B56] text-center'}>{item.title}</h3>
+            <p className={'text-[#F0EBCE] md:text-md text-center'}>{item.description}</p>
         </div>
 
     )

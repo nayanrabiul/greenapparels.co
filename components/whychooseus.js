@@ -9,26 +9,25 @@ const data = [
         icon: "/whychooseus/1.svg",
         title: "Trusted PartnerShip",
         description:
-            "We will provide the best price for you. from the beat quality we give we will give you a special price compared to other places, and we will give you other bonuses",
+            "we favor long term strategic partnerships with our clients which is reflected in the time we have enjoyed relationships with some of the world’s major brands",
     },
     {
         icon: "/whychooseus/2.svg",
         title: "Integrity",
         description:
-            "We will provide the best price for you. from the beat quality we give we will give you a special price compared to other places, and we will give you other bonuses",
+            "we believe firmly that our integrity and professionalism coupled with our multi category offer sets us apart.",
     },
     {
         icon: "/whychooseus/3.svg",
         title: "stability",
         description:
-            "We will provide the best price for you. from the beat quality we give we will give you a special price compared to other places, and we will give you other bonuses",
+            "we seek to re-invest to secure a long and prosperous future for about organization and ensure a stable and reliable supply  chain for our clients",
     },
     {
         icon: "/whychooseus/4.svg",
         title: "Greater Flexibility",
         description:
-            "We will provide the best price for you. from the beat quality we give we will give you a special price compared to other places, and we will give you other bonuses",
-    },
+            "To pioneer as the ever growing vendor of choice and recognized organization for quality and innovative supply and services across all the continents."    },
 ];
 
 const Whychooseus = () => {
@@ -43,6 +42,7 @@ const Whychooseus = () => {
                     className={` mx-auto flex flex-col`}
                 >
                     <h1 className="text-center text-first py-4">Why Choose Us</h1>
+                    <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>In short, our clients' satisfaction and belief in our products is the foundation of our business, and we are committed to making it a priority in everything we do.</h4>
 
                         <div className="md:p-8 flex flex-wrap justify-center">
                             {data.map((item, index) => (
