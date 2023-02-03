@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, {useCallback, useContext, useEffect, useState} from "react";
 
-import Exprience from "../exprience";
-import Products from "../products";
-import Affiliations from "../affiliations";
+import Exprience from "../../sections/exprience";
+import Products from "../../sections/products";
+import Affiliations from "../../sections/affiliations";
 
 import { motion } from "framer-motion"
 
@@ -78,7 +78,8 @@ const Nav = () => {
 
             <nav  className="container p-0 flex justify-between items-center">
                 {/* for desktop */}
-                <div className="w-full py-1 flex justify-between items-center">
+                <div className="w-full py-1 flex justify-between items-center" >
+                    <Link href={'/#Whychooseus'}>
                     <Image
                         src={'/nav/logo.png'}
                         alt="logo"
@@ -86,6 +87,7 @@ const Nav = () => {
                         width={512}
                         height={512}
                     />
+                    </Link>
 
                     <div className="hidden md:block">
                         <ul className="flex flex-row justify-end items-center space-x-3">

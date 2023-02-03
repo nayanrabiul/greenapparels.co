@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 
 
 import {planetVariants, staggerContainer, fadeIn} from '../utils/motion';
-import AnimatedCounter from "./animated_number_counter";
+import AnimatedCounter from "../components/animated_number_counter";
 
 
 const data = [
@@ -47,7 +47,7 @@ const Exprience = () => {
                                     years of
 
                                 </h3>
-                                <span className={'text-6xl border-b-4 text-main font-bold'}>EXPRIENCE</span>
+                                <span className={'text-6xl border-b-4 border-second text-main font-bold'}>EXPRIENCE</span>
                                 <p className={'text-main text-center mt-3 mb-12 md:m-8 w-[70%]'}> We provide World
                                     Class
                                     solluton Unmatched to any other company</p>

@@ -22,7 +22,7 @@ const Sub_Products = ({item}) => {
                 >
                     <Image
                         src={item.image}
-                        className={'h-[200px] md:h-[300px] rounded-xl'}
+                        className={'h-[200px] md:h-[300px] rounded-xl object-cover'}
                         alt="alt"
                         height={300}
                         width={300}

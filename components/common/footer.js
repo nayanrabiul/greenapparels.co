@@ -51,7 +51,7 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         1on1 Coaching
@@ -60,7 +60,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Company Review
@@ -69,7 +69,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Accounts Review
@@ -78,7 +78,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         HR Consulting
@@ -87,7 +87,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         SEO Optimisation
@@ -106,7 +106,7 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         About
@@ -115,7 +115,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Meet the Team
@@ -124,7 +124,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Accounts Review
@@ -143,7 +143,7 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Contact
@@ -152,7 +152,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         FAQs
@@ -161,7 +161,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75"
                       >
                         Live Chat
@@ -180,7 +180,7 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Accessibility
@@ -189,7 +189,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Returns Policy
@@ -198,7 +198,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Refund Policy
@@ -207,7 +207,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 "
                       >
                         Hiring Statistics
@@ -229,7 +229,7 @@ const Footer = () => {
                   <ul className="space-y-4 text-sm">
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 dark:text-gray-200"
                       >
                         Marketing Calendar
@@ -238,7 +238,7 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="#"
+                        href="components/common#"
                         className=" transition hover:opacity-75 dark:text-gray-200"
                       >
                         SEO Infographics
@@ -332,7 +332,7 @@ const Footer = () => {
                 <ul className="flex flex-wrap justify-start gap-4 text-xs lg:justify-end">
                   <li>
                     <a
-                      href="#"
+                      href="components/common#"
                       className=" transition hover:opacity-75 dark:text-gray-400"
                     >
                       Terms & Conditions
@@ -341,7 +341,7 @@ const Footer = () => {
 
                   <li>
                     <a
-                      href="#"
+                      href="components/common#"
                       className=" transition hover:opacity-75 dark:text-gray-400"
                     >
                       Privacy Policy
@@ -350,7 +350,7 @@ const Footer = () => {
 
                   <li>
                     <a
-                      href="#"
+                      href="components/common#"
                       className=" transition hover:opacity-75 dark:text-gray-400"
                     >
                       Cookies

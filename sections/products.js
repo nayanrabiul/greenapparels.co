@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, {useState} from "react";
-import Sub_Products from "./sub_products";
+import Sub_Products from "../components/sub_products";
 
 import {motion} from 'framer-motion';
 import {planetVariants, staggerContainer, fadeIn} from '../utils/motion';

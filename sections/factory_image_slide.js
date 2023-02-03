@@ -59,8 +59,9 @@ const Factorys = () => {
                 width={1024}
               />
             </div>
-            <div className="absolute w-full h-full px-[16%] pt-[16%]  top-0 flex flex-col items-left justify-center ">
-              <h1 className="text-main ">{factory.title}</h1>
+            <div className="absolute w-full h-full px-[8%] pt-[16%]  top-0 flex flex-col items-left justify-center ">
+              <h1 className="text-first mt-32">{factory.title}</h1>
+
             </div>
           </div>
         ))}

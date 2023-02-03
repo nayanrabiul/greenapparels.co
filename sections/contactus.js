@@ -5,8 +5,10 @@ const Contactus = () => {
     <div className="text-white py-16 md:py-32" id={'Contactus'}>
       <div className="container mx-auto my-4 px-4 lg:px-20 flex justify-center items-center ">
         <div className="w-full p-8 my-4 md:px-12 lg:w-9/12  rounded-2xl shadow-2xl">
+          <h2 className="font-bold uppercase text-second "> Strategic            Partnership  !</h2>
+          <h3 className={'text-third '}>Contact with us</h3>
           <div className="flex">
-            <h2 className="font-bold uppercase text-second text-center ">Contact with us</h2>
+
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
             <input
