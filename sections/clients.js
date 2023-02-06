@@ -59,7 +59,7 @@ const settings = {
 
 const Clients = () => {
     return (
-        <div className=" py-8 md:py-16">
+        <div className=" py-8  ">
             <div className=" ">
                 <h1 className="text-center text-first py-4">Our Clients</h1>
 

@@ -54,14 +54,14 @@ const settings = {
 
 const Csr = () => {
     return (
-        <div className=" py-8 md:py-16">
+        <div className=" py-8 ">
             <div className=" ">
-                <h1 className="text-center text-first py-4">CSR</h1>
+                <h1 className="text-center text-first pb-4">CSR</h1>
 
                 <div className="w-full">
                     <Slider {...settings}>
                         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
-                            <div className="p-4 mb-5" key={i}>
+                            <div className="p-4 " key={i}>
                                 <Image
                                     className="w-full h-[60px] lg:h-[100px] object-contain shadow-lg"
                                     src={`/csr/${i}.png`}

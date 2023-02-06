@@ -32,7 +32,7 @@ const data = [
 
 const Whychooseus = () => {
     return (
-        <div className="w-full py-16 md:py-32" id={'Whychooseus'}>
+        <div className="w-full py-8 md:py-16 lg:py-32" id={'Whychooseus'}>
             <div className="container ">
                 <motion.div
                     variants={fadeIn('up', 'tween', 0.3, 1)}

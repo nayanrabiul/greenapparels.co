@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from "react";
 
-const AnimatedCounter = ({ countTo, duration }) => {
-    const [count, setCount] = useState(0);
+import React from 'react';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
-    useEffect(() => {
-        let intervalId = null;
-        const step = () => {
-            setCount(c => {
-                if (c >= countTo) {
-                    clearInterval(intervalId);
-                    return countTo;
-                }
-                return c + 1;
-            });
-        };
-
-        intervalId = setInterval(step, duration / countTo);
-        return () => clearInterval(intervalId);
-    }, [countTo, duration]);
-
+const AnimatedCounter = ({ countTo, duration, className }) => {
     return (
-        <div className="text-6xl font-bold text-center">
-            {count}{"+"}
+        <div className="">
+            <VisibilitySensor partialVisibility offset={{ bottom: 0 }}>
+                {({ isVisible }) => (
+                    <div style={{ height: 100 }}>
+                        {isVisible ? <CountUp className={`${className}`} duration={duration} end={countTo} /> : null}
+                    </div>
+                )}
+            </VisibilitySensor>
         </div>
     );
 };

@@ -47,7 +47,6 @@ const Nav = () => {
         const {scrollY} = window;
 
         scrollY > 120 ? setnav_color_change(true) : setnav_color_change(false);
-        console.log(scrollY, nav_color_change)
     };
 
     useEffect(() => {
@@ -62,7 +61,7 @@ const Nav = () => {
     const data = [
         {title: "Affiliations", hash_link: "#Affiliations"},
         {title: "Products", hash_link: "#Products"},
-        {title: "Exprience", hash_link: "#Exprience"},
+        {title: "Experience", hash_link: "#Exprience"},
         {title: "About Us", hash_link: "#Whychooseus"},
         {title: "Partnership", hash_link: "#Contactus"},
 

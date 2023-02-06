@@ -66,7 +66,7 @@ const Products = () => {
     const [hoverdiv, setHoverDiv] = useState(false);
 
     return (
-        <div className="w-full py-16 md:py-32 " id={'Products'}>
+        <div className="w-full py-8 md:py-16 lg:py-32 " id={'Products'}>
             <div className="container  space-y-8 ">
                 <motion.div
                     variants={staggerContainer}

@@ -6,11 +6,11 @@ const Swot = () => {
 
 
     return (
-        <div className="w-full  py-16 md:py-32 flex  flex-col items-center">
-            <div className="my-4 container bg-[#4E6C50] flex flex-col justify-center items-center space-y-4 p-4 ">
-                <h4 className="text-center text-[#0E2007] ">Sollution Provided By<br/>
-                </h4>
-                <h2 className="text-center text-[#0E2007] md:text-5xl text-first py-4">GREEN APPARELS</h2>
+        <div className="w-full py-8 md:py-16 flex  flex-col items-center">
+            <div className=" container text-first flex flex-col justify-center items-center rounded-xl p-4 ">
+                <h2 className="text-center text-first ">Sollution Provided By<br/>
+                </h2>
+                <h1 className="text-center text-first py-4 border-b-2 border-second mb-4">GREEN APPARELS</h1>
 
             </div>
             <Image

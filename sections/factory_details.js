@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, {useState} from "react";
 
-import {Tabs} from 'antd';
+import {Button, Drawer, Radio, Space} from 'antd';
 import GarmentsDetails from "../components/garments_details";
 
 const data = [
@@ -102,29 +102,49 @@ const data = [
 
 const FactoryDetails = () => {
     const [toggleState, setToggleState] = useState(0);
-    const toggleTab = (index) => {
-        setToggleState(index);
+
+    const [open, setOpen] = useState(false);
+
+    const showDrawer = () => {
+        setOpen(true);
+    };
+    const onClose = () => {
+        setOpen(false);
     };
 
-    return (<div className="w-full  bg-[#001201] py-16 md:py-32 " id={'Affiliations'}>
-        <h1 className="text-center text-first py-4 ">Our Manufactureing Units</h1>
+
+
+    return (<div className="w-full  bg-[#001201] py-8 md:py-16 lg:py-32 " id={'Affiliations'}>
+        <h1 className="text-center text-first py-2 ">Our Manufactureing Units</h1>
         <div className="container text-white py-8 ">
 
             {/* company logo and tab  */}
-            <Tabs
-                className="text-second"
-                defaultActiveKey="2"
-                className="w-full text-second "
 
-                items={data.map((gar, index) => {
+                {data.map((gar, index) => (
+                    <div key={index} className={'flex flex-col justify-center items-center space-y-2 '}>
+                        <button type=" " onClick={showDrawer}>
+                            <h3 className={'shadow-xl border border-third rounded-xl p-3 my-2 text-second'}>{gar.CompanyName} </h3>
 
-                    return {
-                        label: (<h4 className={''}>  {gar.CompanyName} </h4>),
-                        key: index,
-                        children: <GarmentsDetails gar={gar}/>,
-                    };
-                })}
-            />
+                        </button>
+                        <Drawer
+
+                            placement={'left'}
+                            closable={false}
+                            onClose={onClose}
+                            open={open}
+                            bodyStyle={{ backgroundColor:"#0E2007"}}
+                            width={"100%"}
+                          >
+
+
+                            <GarmentsDetails  gar={gar} onClose={onClose}/>,
+
+                        </Drawer>
+                    </div>
+
+                ))}
+
+
 
         </div>
     </div>);

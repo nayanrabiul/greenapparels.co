@@ -45,7 +45,7 @@ const data = [
 ];
 const Factorys = () => {
   return (
-    <div className="w-full py-16 md:py-32">
+    <div className="w-full  md:py-16 md:py-32">
       <Slider {...settings}
       >
         {data.map((factory, index) => (

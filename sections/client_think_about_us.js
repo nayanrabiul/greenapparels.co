@@ -67,7 +67,7 @@ const reviews = [
 
 const Client_think_about_us = () => {
     return (
-        <div className="w-full py-16 md:py-32 ">
+        <div className="w-full py-8 ">
             <div className="container text-white space-y-8 text-white">
 
                 <h1 className="text-center text-first py-4">Clients Review</h1>

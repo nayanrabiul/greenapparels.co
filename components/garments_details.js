@@ -1,19 +1,33 @@
 import React, {useState} from "react";
+import Image from "next/image";
+import Factorys from "../sections/factory_image_slide";
 
 
-const GarmentsDetails = ({gar}) => {
+const GarmentsDetails = ({gar, onClose}) => {
     return (
-        <div className={'w-full border border-first p-4 rounded-xl'}>
+        <div className={'w-full border border-first p-4 rounded-xl bg-main'}>
 
-            <h3 className={'text-center'}>{gar.CompanyName} </h3>
+            <div className=" flex justify-end">
+                <Image
+                    src={"/nav/close.svg"}
+                    alt="menu"
+                    className="object-contain"
+                    height={28}
+                    width={28}
+                    onClick={() => onClose(false)}
+                />
+            </div>
+            <h1 className="text-center text-first py-2 ">{gar.CompanyName}</h1>
+
             <h4 className={'text-center text-third'}>{gar.Tagline}</h4>
-            <div className={'container grid grid-cols-1 md:grid-cols-3 gap-8 my-8'}>
+            <div className={'container grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 mb-4 md:mb-0'}>
 
                 <div>
-                    <h3 className={"text-center my-2"}>Space Allocation</h3>
+                    <h2 className={"text-center text-second  my-2"}>Space Allocation</h2>
 
                     <div className="relative overflow-x-auto ">
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
+                        <table
+                            className="w-full text-sm text-left text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
 
                             <tbody>
                             <div className={'border border-second rounded-xl p-4'}>
@@ -39,10 +53,11 @@ const GarmentsDetails = ({gar}) => {
                     </div>
                 </div>
                 <div>
-                    <h3 className={"text-center my-2"}>Factsheet</h3>
+                    <h2 className={"text-center text-second  my-2"}>Factsheet</h2>
 
                     <div className="relative overflow-x-auto">
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
+                        <table
+                            className="w-full text-sm text-left text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
 
                             <tbody>
                             <div className={'border border-second rounded-xl p-4'}>
@@ -68,13 +83,15 @@ const GarmentsDetails = ({gar}) => {
                     </div>
                 </div>
                 <div>
-                    <h3 className={"text-center my-2"}>Certification</h3>
+                    <h2 className={"text-center text-second  my-2"}>Certification</h2>
 
                     <div className="relative overflow-x-auto">
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
+                        <table
+                            className="w-full text-sm text-left text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
 
                             <tbody>
-                            <div className={'border border-second rounded-xl p-4 flex flex-col justify-center items-center'}>
+                            <div
+                                className={'border border-second rounded-xl p-4 flex flex-col justify-center items-center'}>
                                 {(Object.keys(gar.Certification)).map((item, index) => (
 
 
@@ -95,8 +112,9 @@ const GarmentsDetails = ({gar}) => {
                 </div>
 
 
-
             </div>
+            <Factorys />
+
         </div>
     )
 }
