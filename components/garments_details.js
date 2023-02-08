@@ -3,11 +3,11 @@ import Image from "next/image";
 import Factorys from "../sections/factory_image_slide";
 
 
-const GarmentsDetails = ({gar, onClose}) => {
+const GarmentsDetails = ({gar, onClose, cross, image}) => {
     return (
         <div className={'w-full border border-first p-4 rounded-xl bg-main'}>
 
-            <div className=" flex justify-end">
+            {cross && <div className=" flex justify-end">
                 <Image
                     src={"/nav/close.svg"}
                     alt="menu"
@@ -16,14 +16,18 @@ const GarmentsDetails = ({gar, onClose}) => {
                     width={28}
                     onClick={() => onClose(false)}
                 />
-            </div>
-            <h1 className="text-center text-first py-2 ">{gar.CompanyName}</h1>
+            </div>}
+            {cross ? <h1 className="text-center text-first py-2 ">{gar.CompanyName}</h1> :
+                <h2 className="text-center text-second py-2 ">{gar.CompanyName}</h2>}
+
 
             <h4 className={'text-center text-third'}>{gar.Tagline}</h4>
             <div className={'container grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 mb-4 md:mb-0'}>
 
                 <div>
-                    <h2 className={"text-center text-second  my-2"}>Space Allocation</h2>
+                    {cross ? <h3 className={"text-center text-second  my-2"}>Space Allocation</h3> :
+                        <h2 className={"text-center text-second  my-2"}>Space Allocation</h2>}
+
 
                     <div className="relative overflow-x-auto ">
                         <table
@@ -53,7 +57,9 @@ const GarmentsDetails = ({gar, onClose}) => {
                     </div>
                 </div>
                 <div>
-                    <h2 className={"text-center text-second  my-2"}>Factsheet</h2>
+                    {cross ? <h3 className={"text-center text-second  my-2"}>Factsheet </h3> :
+                        <h2 className={"text-center text-second  my-2"}>Factsheet </h2>}
+
 
                     <div className="relative overflow-x-auto">
                         <table
@@ -83,7 +89,8 @@ const GarmentsDetails = ({gar, onClose}) => {
                     </div>
                 </div>
                 <div>
-                    <h2 className={"text-center text-second  my-2"}>Certification</h2>
+                    {cross ? <h3 className={"text-center text-second  my-2"}>Certification </h3> :
+                        <h2 className={"text-center text-second  my-2"}>Certification </h2>}
 
                     <div className="relative overflow-x-auto">
                         <table
@@ -113,7 +120,8 @@ const GarmentsDetails = ({gar, onClose}) => {
 
 
             </div>
-            <Factorys />
+            {image && <Factorys/>}
+
 
         </div>
     )

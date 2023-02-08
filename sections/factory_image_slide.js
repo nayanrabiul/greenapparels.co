@@ -6,68 +6,72 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-
 const settings = {
 
-  dots: true,
-  infinite: true,
-  slidesToShow:1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 1800,
-  pauseOnHover: false,
-  arrows: false
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1800,
+    pauseOnHover: true,
+
+    arrows: false
 };
 
 
-const data = [
-  {
+const data = [{
     title: "A WORLD-CLASS GARMENT FACTORY IN BANGLADESH",
     description: "Short description of the product goes here",
     link: "",
     image: "/slide/factory/factory_hole.png",
-  },
-  {
+}, {
     title: "SEWING FLOOR",
     description: "Short description of the product goes here",
     link: "",
     image: "/slide/factory/SEWING_FLOOR.jpg",
-  }, {
+}, {
     title: "CUTTING FLOOR",
     description: "Short description of the product goes here",
     link: "",
-    image: "/slide/factory/CUTTING_FLOOR.jpg"},{
+    image: "/slide/factory/CUTTING_FLOOR.jpg"
+}, {
     title: "Sewinig Machine",
     description: "Short description of the product goes here",
     link: "",
-    image: "/slide/factory/Sewinig_Machine.jpg"},
+    image: "/slide/factory/Sewinig_Machine.jpg"
+},
 
 ];
 const Factorys = () => {
-  return (
-    <div className="w-full  md:py-16 md:py-32">
-      <Slider {...settings}
-      >
-        {data.map((factory, index) => (
-          <div className="w-full z-10 relative" key={index}>
-            <div className="relative w-full rounded-md overflow-hidden">
-              <Image
-                className="w-full h-[444px] lg:h-[600px] object-cover"
-                src={factory.image}
-                alt="alt"
-                height={1024}
-                width={1024}
-              />
-            </div>
-            <div className="absolute w-full h-full px-[8%] pt-[16%]  top-0 flex flex-col items-left justify-center ">
-              <h1 className="text-first mt-32">{factory.title}</h1>
+    return (<div className="w-full py-8 md:py-16 lg:py-24">
+        <Slider {...settings}
+        >
+            {data.map((factory, index) => (
 
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
+                <div key={index} className={'w-full'}>
+
+                    <div className="flex justify-center items-center space-x-8">
+                        <div className={''}>
+                            <Image
+                                className="object-contain h-[444px] w-full rounded-lg "
+                                src={factory.image} alt=""
+                                height={512}
+                                width={512}>
+                            </Image>
+                        </div>
+
+                        <div className="">
+                            <h2 className="mb-2  font-bold tracking-tight text-second">{factory.title}</h2>
+                            <p className="mb-3 font-normal text-third">Here are the biggest
+                                enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
+                    </div>
+                </div>
+
+            ))}
+        </Slider>
+    </div>);
 };
 
 export default Factorys;

@@ -7,13 +7,14 @@ import {planetVariants, staggerContainer, fadeIn} from '../utils/motion';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
-const AnimatedCounter = ({ countTo, duration, className }) => {
+const AnimatedCounter = ({ countTo, duration, className,plus }) => {
     return (
         <div className="">
-            <VisibilitySensor partialVisibility offset={{ bottom: 0 }}>
+            <VisibilitySensor partialVisibility offset={{ bottom: 0 }} >
                 {({ isVisible }) => (
-                    <div style={{ height: 100 }}>
-                        {isVisible ? <CountUp className={`${className}`} duration={duration} end={countTo} /> : null}
+                    <div className={'flex justify-center items-center '} style={{ height: 100 }}>
+                        {isVisible ?<CountUp className={`${className}`} duration={duration} end={countTo} /> : null}
+                        {plus ?<p className={`${className}`}>+</p>:""}
                     </div>
                 )}
             </VisibilitySensor>
@@ -26,10 +27,10 @@ const AnimatedCounter = ({ countTo, duration, className }) => {
 const data = [
 
 
-    {title: "Recuring clients", number: 97},
-    {title: "Clients we Served", number: 40},
-    {title: "Smapling Section", number: 37},
-    {title: "Imorted Machines", number: 52},
+    {title: "Recuring clients",descriptions:'We regularly serve our services to businesses, providing a stable source of revenue and establishing long-term relationships with our recurring clients.', number: 17,plus:false},
+    {title: "Clients we Served",descriptions:'We have already served 45 clients, demonstrating our ability to deliver high-quality goods and services and establish successful relationships with our customers' ,number: 45,plus:true},
+    {title: "Smapling Section",descriptions:"We have 32 sampling sections, providing a diverse range of options for our clients to test and evaluate before making a purchase.", number: 32,plus:false},
+    {title: "Imorted Machines",descriptions:"We have imported 1045+ machines, demonstrating our commitment to providing the latest technology and equipment to support our clients' needs.", number: 1045,plus:true},
 
 ]
 const Exprience = () => {
@@ -37,7 +38,7 @@ const Exprience = () => {
 
 
     return (
-        <div className="w-full  bg-[#4E6C50] py-8 md:py-16 lg:py-32" id={'Exprience'}>
+        <div className="w-full  bg-[#4E6C50] py-8 md:py-16 lg:py-24" id={'Exprience'}>
 
             <div className="container">
                 <motion.div
@@ -47,9 +48,7 @@ const Exprience = () => {
                     viewport={{once: false, amount: 0.25}}
                 >
 
-
                     <div className={'flex flex-wrap'}>
-
 
                         <motion.div
                             variants={fadeIn('right', 'tween', 0.2, 1)}
@@ -70,7 +69,7 @@ const Exprience = () => {
 
 
                         <div className={'w-full md:w-[63%] '}>
-                            <div className={'grid grid-cols-2 gap-8'}>
+                            <div className={'grid grid-cols-2 gap-6 mr-8'}>
                                 {data.map((item, index) => (
 
                                     <motion.div key={index}
@@ -79,10 +78,11 @@ const Exprience = () => {
                                     >
                                         <h3 className="font-bold  text-second">{item.title}</h3>
 
-
-                                        <AnimatedCounter className={'text-4xl font-bold text-third'}
+                                        <AnimatedCounter className={'text-5xl font-bold text-third'}
+                                                         plus={item.plus}
                                                          countTo={item.number}
-                                                         duration={(2000 + (index + 1) * 1000) / 1000}/>
+                                                         duration={2.8}/>
+                                        <p className={'text-third'}>{item.descriptions}</p>
 
 
                                     </motion.div>

@@ -32,7 +32,7 @@ const data = [
 
 const Whychooseus = () => {
     return (
-        <div className="w-full py-8 md:py-16 lg:py-32" id={'Whychooseus'}>
+        <div className="w-full py-8 md:py-16 lg:py-24" id={'Whychooseus'}>
             <div className="container ">
                 <motion.div
                     variants={fadeIn('up', 'tween', 0.3, 1)}
@@ -41,12 +41,12 @@ const Whychooseus = () => {
                     viewport={{once: false, amount: 0.1}}
                     className={` mx-auto flex flex-col`}
                 >
-                    <h1 className="text-center text-first py-4">Why Choose Us</h1>
+                    <h1 className="text-center text-first pb-4">Why Choose Us</h1>
                     <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>In short, our clients satisfaction and belief in our products is the foundation of our business, and we are committed to making it a priority in everything we do.</h4>
 
-                        <div className="md:p-8 flex flex-wrap justify-center">
+                        <div className="md:px-8 mt-8 flex flex-wrap justify-center">
                             {data.map((item, index) => (
-                                <div className="w-1/2  py-6 flex flex-col items-center space-y-4 " key={index}>
+                                <div className="w-1/2   flex flex-col items-center space-y-4 " key={index}>
                                     <Image
                                         src={item.icon}
                                         alt="logo"

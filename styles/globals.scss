@@ -5,6 +5,16 @@
 @import "fonts";
 @import "tab";
 
+
+
+
+
+.ant-tabs-tab-active {
+  color: red !important;
+}
+
+
+
 * {
   font-family: "Eudoxus Sans", sans-serif;
   scroll-behavior: smooth!important;

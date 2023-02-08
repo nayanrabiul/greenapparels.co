@@ -23,7 +23,6 @@ function Home({false_data}) {
             <Whychooseus id={'Whychooseus'}/>
             <Exprience id={'Exprience'}/>
             <Products id={'Products'}/>
-            {/*<Affiliations id={'Affiliations'}/>*/}
             <FactoryDetails/>
             <Factorys id={'Factorys'}/>
             <Csr id={'Csr'}/>
@@ -38,16 +37,6 @@ function Home({false_data}) {
             {/*quality auditors overseeing production and reporting to the Director and MD of the company.",*/}
         </Layout>
     );
-}
-
-export async function getStaticProps() {
-
-    const false_data = {}
-    return {
-        props: {
-            false_data
-        },
-    }
 }
 
 export default Home;
