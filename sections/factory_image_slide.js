@@ -44,17 +44,17 @@ const data = [{
 
 ];
 const Factorys = () => {
-    return (<div className="w-full py-8 md:py-16 lg:py-24">
+    return (<div className="w-full py-8 lg:py-16">
         <Slider {...settings}
         >
             {data.map((factory, index) => (
 
                 <div key={index} className={'w-full'}>
 
-                    <div className="flex justify-center items-center space-x-8">
+                    <div className="flex justify-center items-center space-x-2 md:space-x-4 lg:space-x-8">
                         <div className={''}>
                             <Image
-                                className="object-contain h-[444px] w-full rounded-lg "
+                                className="object-fill md:object-contain h-[222px] md:h-[444px] w-full rounded-lg "
                                 src={factory.image} alt=""
                                 height={512}
                                 width={512}>
