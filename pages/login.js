@@ -40,7 +40,7 @@ export default function LogIn() {
 
   return (
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
         <div className=" col-span-1 ">
           <div className="w-full h-full">
             <Image
