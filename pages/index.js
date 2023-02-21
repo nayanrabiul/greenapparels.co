@@ -38,7 +38,7 @@ function Home({datas}) {
 }
 
 export async function getStaticProps() {
-    const res = await axios.get(process.env.NEXT_PUBLIC_URL + 'api/page?page=all');
+    const res = await axios.get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
 
 
     return {
