@@ -73,21 +73,14 @@ const Exprience = ({data}) => {
                                                          countTo={item.number}
                                                          duration={2.8}/>
                                         <p className={'text-third'}>{item.description}</p>
-
-
                                     </motion.div>
                                 ))}
                             </div>
                         </div>
-
-
                     </div>
-
-
                 </motion.div>
             </div>
         </div>);
-
 };
 
 export default Exprience;

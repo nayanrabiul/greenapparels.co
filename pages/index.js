@@ -37,15 +37,13 @@ function Home({datas}) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(){
     const res = await axios.get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
-
 
     return {
         props: {
             datas: res.data.data
-        },
-        revalidate: 60 // revalidate every 60 seconds
+        }
     }
 }
 

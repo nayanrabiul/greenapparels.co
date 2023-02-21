@@ -118,13 +118,10 @@ const GarmentsDetails = ({gar, onClose, cross, image}) => {
                     </div>
                 </div>
 
-
             </div>
             {image && <Factorys/>}
-
 
         </div>
     )
 }
-
 export default GarmentsDetails;
