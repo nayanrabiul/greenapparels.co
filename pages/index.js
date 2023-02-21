@@ -1,43 +1,53 @@
-import Head from "next/head";
-import Image from "next/image";
-import Affiliations from "../sections/affiliations";
-import Clients from "../sections/clients";
-import Client_think_about_us from "../sections/client_think_about_us";
+import React from 'react';
 import Layout from "../components/common/Layout";
-import Contactus from "../sections/contactus";
-import Csr from "../sections/csr";
-import Factorys from "../sections/factory_image_slide";
-import Products from "../sections/products";
 import Slide from "../sections/slide";
 import Whychooseus from "../sections/whychooseus";
 import Exprience from "../sections/exprience";
-import Swot from "../sections/swot";
+import HomeProducts from "../sections/products";
 import FactoryDetails from "../sections/factory_details";
+import Factorys from "../sections/factory_image_slide";
+import Csr from "../sections/csr";
+import Swot from "../sections/swot";
+import Clients from "../sections/clients";
+import Contactus from "../sections/contactus";
+import Client_think_about_us from "../sections/client_think_about_us";
 
 
-function Home({false_data}) {
+function Home({datas}) {
+    const data = (name) => {
+        const sd = datas.filter(data => data.page === name);
+        return sd[0].content;
+    }
 
     return (
         <Layout>
-            <Slide id={'slide'}/>
-            <Whychooseus id={'Whychooseus'}/>
-            <Exprience id={'Exprience'}/>
-            <Products id={'Products'}/>
-            <FactoryDetails/>
-            <Factorys id={'Factorys'}/>
-            <Csr id={'Csr'}/>
+            <Slide id={'slide'} data={data('main_slide')}/>
+            <Whychooseus id={'Whychooseus'} data={data('about_us')}/>
+            <Exprience id={'Exprience'} data={data('exprience')}/>
+            <HomeProducts data={data('products')}/>
+            <FactoryDetails />
+            <Factorys id={'Factorys'} data={data('factories_slide')}/>
+            <Csr id={'Csr'} data={data('csr')}/>
             <Swot id={'Swot'}/>
-            <Clients id={'Clients'}/>
+            <Clients id={'Clients'} data={data('our_clients')}/>
             <Contactus id={'Contactus'}/>
-            <Client_think_about_us id={'Client_think_about_us'}/>
-
-
-            {/*"Quality Assurance": "RONG RUI GARMENT BD LTD is committed to providing the highest quality products.*/}
-            {/*All garments pass through strict quality control checkpoints at every stage of production with corporate*/}
-            {/*quality auditors overseeing production and reporting to the Director and MD of the company.",*/}
+            <Client_think_about_us id={'Client_think_about_us'} data={data('reviews')}/>
         </Layout>
     );
 }
+
+export async function getStaticProps() {
+    const res = await fetch(process.env.NEXT_PUBLIC_URL + 'api/page?page=all');
+    const data = await res.json();
+
+    return {
+        props: {
+            datas: data.data
+        },
+        revalidate: 60 // revalidate every 60 seconds
+    }
+}
+
 
 export default Home;
 

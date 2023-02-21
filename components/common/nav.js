@@ -6,40 +6,42 @@ import Exprience from "../../sections/exprience";
 import Products from "../../sections/products";
 import Affiliations from "../../sections/affiliations";
 
-import { motion } from "framer-motion"
+import {motion} from "framer-motion"
 
 const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
+    open: {opacity: 1, x: 0},
+    closed: {opacity: 0, x: "-100%"},
 }
 
 
 const variants_mobile_nav_ul = {
     open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+        transition: {staggerChildren: 0.07, delayChildren: 0.2}
     },
     closed: {
-        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+        transition: {staggerChildren: 0.05, staggerDirection: -1}
     }
-};const variants_mobile_nav_li = {
+};
+const variants_mobile_nav_li = {
     open: {
         y: 0,
         opacity: 1,
         transition: {
-            y: { stiffness: 1000, velocity: -100 }
+            y: {stiffness: 1000, velocity: -100}
         }
     },
     closed: {
         y: 50,
         opacity: 0,
         transition: {
-            y: { stiffness: 1000 }
+            y: {stiffness: 1000}
         }
     }
 };
 
 
 const Nav = () => {
+
     const [toggle, setToggle] = useState(false);
     const [nav_color_change, setnav_color_change] = useState(false);
 
@@ -75,17 +77,17 @@ const Nav = () => {
             } text-second `}
         >
 
-            <nav  className="container p-0 flex justify-between items-center">
+            <nav className="container p-0 flex justify-between items-center">
                 {/* for desktop */}
-                <div className="w-full py-1 flex justify-between items-center" >
+                <div className="w-full py-1 flex justify-between items-center">
                     <Link href={'/#Whychooseus'}>
-                    <Image
-                        src={'/nav/logo.png'}
-                        alt="logo"
-                        className="w-16 h-12 md:w-28 md:h-20 object-contain"
-                        width={512}
-                        height={512}
-                    />
+                        <Image
+                            src={'/nav/logo.png'}
+                            alt="logo"
+                            className="w-16 h-12 md:w-28 md:h-20 object-contain"
+                            width={512}
+                            height={512}
+                        />
                     </Link>
 
                     <div className="hidden md:block">
@@ -114,7 +116,7 @@ const Nav = () => {
                     {/* this is mobile secton */}
 
                     <motion.nav
-                        animate={toggle ? "open" : "closed"}  variants={variants}
+                        animate={toggle ? "open" : "closed"} variants={variants}
                         className={` ${
                             !toggle ? "hidden" : "fixed"
                         }   top-0 right-0 left-0  h-screen bg-[#000000]  `}
@@ -130,18 +132,19 @@ const Nav = () => {
                                     onClick={() => setToggle(!toggle)}
                                 />
                             </div>
-                            <motion.ul variants={variants_mobile_nav_ul} className=" flex flex-col justify-center items-center space-x-3 text-3xl text-second mt-8 space-y-8">
+                            <motion.ul variants={variants_mobile_nav_ul}
+                                       className=" flex flex-col justify-center items-center space-x-3 text-3xl text-second mt-8 space-y-8">
                                 {data.map((item, index) => (
 
                                     <motion.li
                                         variants={variants_mobile_nav_li}
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={{scale: 1.1}}
+                                        whileTap={{scale: 0.95}}
                                         key={index}
                                     >
-                                        <Link  href={item.hash_link} onClick={() => setToggle(false)}> {item.title}</Link>
+                                        <Link href={item.hash_link}
+                                              onClick={() => setToggle(false)}> {item.title}</Link>
                                     </motion.li>
-
 
 
                                 ))}

@@ -19,43 +19,7 @@ const settings = {
   arrows: false
 };
 
-
-const data = [
-  {
-    title: "Denim",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/denims.jpg",
-  },
-  {
-    title: "Jacket",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/jacket.jpg",
-  },
-  {
-    title: "Out Ware",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/outware.jpg",
-  },
-  {
-    title: "Sport Wear",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/sportwear.jpg",
-  },
-  {
-    title: "Suits",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/suits.jpg",
-  },
-];
-
-const Slide = () => {
-
-
+const Slide = ({data}) => {
 
   return (
     <div className="w-full">
@@ -73,7 +37,7 @@ const Slide = () => {
               />
             </div>
             <div className="absolute w-full h-full p-[16%]  top-0 flex flex-col items-left justify-center">
-              <h1 className="text-third mt-32">{slide.title}</h1>
+              <h1 className="text-third mt-32">{slide.heading}</h1>
               <h3 className=" text-second">{slide.description}</h3>
             </div>
           </div>

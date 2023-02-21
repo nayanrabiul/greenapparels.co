@@ -15,12 +15,13 @@ const Footer = () => {
                                         We are a passionate and dedicated team of professionals who are committed to
                                         creating high-quality garments that embody both style and comfort.
                                     </p>
-                                    <input type="text" placeholder={'example@gmail.com'} className="py-2 px-4 my-2 rounded-xl bg-fourth" /> <br/>
+                                    <input type="text" placeholder={'example@gmail.com'}
+                                           className="py-2 px-4 my-2 rounded-xl bg-fourth"/> <br/>
                                     <Link href={'/#Contactus'}>
-                                    <button
-                                        className=" w-[30%]  px-4 py-2 mt-1 text-sm font-bold tracking-wide  uppercase transition-none rounded-lg border-2 0 sm:mt-0 sm:w-auto sm:flex-shrink-0">
-                                        Contact Us
-                                    </button>
+                                        <button
+                                            className=" w-[30%]  px-4 py-2 mt-1 text-sm font-bold tracking-wide  uppercase transition-none rounded-lg border-2 0 sm:mt-0 sm:w-auto sm:flex-shrink-0">
+                                            Contact Us
+                                        </button>
                                     </Link>
                                 </div>
                             </div>

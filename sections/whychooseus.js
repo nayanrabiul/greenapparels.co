@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 import {motion} from 'framer-motion';
-import { fadeIn, staggerContainer } from '../utils/motion';
+import {fadeIn, staggerContainer} from '../utils/motion';
 
-const data = [
+const dataicon = [
     {
         icon: "/whychooseus/1.svg",
         title: "Trusted PartnerShip",
@@ -27,10 +27,11 @@ const data = [
         icon: "/whychooseus/4.svg",
         title: "Greater Flexibility",
         description:
-            "To pioneer as the ever growing vendor of choice and recognized organization for quality and innovative supply and services across all the continents."    },
+            "To pioneer as the ever growing vendor of choice and recognized organization for quality and innovative supply and services across all the continents."
+    },
 ];
 
-const Whychooseus = () => {
+const Whychooseus = ({data}) => {
     return (
         <div className="w-full py-8 md:py-16 lg:py-24" id={'Whychooseus'}>
             <div className="container ">
@@ -41,25 +42,59 @@ const Whychooseus = () => {
                     viewport={{once: false, amount: 0.1}}
                     className={` mx-auto flex flex-col`}
                 >
-                    <h1 className="text-center text-first pb-4">Why Choose Us</h1>
-                    <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>In short, our clients satisfaction and belief in our products is the foundation of our business, and we are committed to making it a priority in everything we do.</h4>
+                    <h1 className="text-center text-first pb-4">{data[0].heading}</h1>
+                    <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>
+                        {data[0].description}</h4>
 
-                        <div className="md:px-8 mt-8 flex flex-wrap justify-center">
-                            {data.map((item, index) => (
-                                <div className="w-1/2   flex flex-col items-center space-y-4 " key={index}>
-                                    <Image
-                                        src={item.icon}
-                                        alt="logo"
-                                        className="w-[48px] h-[48px]"
-                                        width={1}
-                                        height={1}
-                                    />
-                                    <h3 className={'text-center text-second'}>{item.title}</h3>
-                                    <p className="w-[65%] text-center text-third">{item.description}</p>
-                                </div>
-                            ))}
+                    <div className="md:px-8 mt-8 flex flex-wrap justify-center">
+
+                        <div className="w-1/2   flex flex-col items-center space-y-4 ">
+                            <Image
+                                src={dataicon[0].icon}
+                                alt="logo"
+                                className="w-[48px] h-[48px]"
+                                width={1}
+                                height={1}
+                            />
+                            <h3 className={'text-center text-second'}>{data[1].heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[1].description}</p>
                         </div>
-                    </motion.div>
+                        <div className="w-1/2   flex flex-col items-center space-y-4 " >
+                            <Image
+                                src={dataicon[1].icon}
+                                alt="logo"
+                                className="w-[48px] h-[48px]"
+                                width={1}
+                                height={1}
+                            />
+                            <h3 className={'text-center text-second'}>{data[2].heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[2].description}</p>
+                        </div>
+                        <div className="w-1/2   flex flex-col items-center space-y-4 " >
+                            <Image
+                                src={dataicon[2].icon}
+                                alt="logo"
+                                className="w-[48px] h-[48px]"
+                                width={1}
+                                height={1}
+                            />
+                            <h3 className={'text-center text-second'}>{data[3].heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[3].description}</p>
+                        </div>
+                        <div className="w-1/2   flex flex-col items-center space-y-4 " >
+                            <Image
+                                src={dataicon[3].icon}
+                                alt="logo"
+                                className="w-[48px] h-[48px]"
+                                width={1}
+                                height={1}
+                            />
+                            <h3 className={'text-center text-second'}>{data[4].heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[4].description}</p>
+                        </div>
+
+                    </div>
+                </motion.div>
             </div>
         </div>
     );

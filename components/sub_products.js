@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import React, {useState} from "react";
 
@@ -41,8 +42,8 @@ const Sub_Products = ({item}) => {
                     className={'h-[200px] md:h-[300px] flex flex-col justify-center items-center'}
                 >
                     <div className={'h-[300px] md:max-w-[80%] text-second text-center p-1  md:px-4 md:py-2 overflow-hidden border border-third rounded-xl'} >
-                       <h3 className={'text-third text-center text-center'}>{item.title}</h3>
-                        <p className={'md:text-md text-center'}>{item.description_hover} </p>
+                        <h3 className={'text-third text-center text-center'}>{item.heading}</h3>
+                        <p className={'md:text-md text-center'}>{item.h_description} </p>
                     </div>
 
                 </motion.div>

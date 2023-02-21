@@ -15,7 +15,7 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = await mongoose.connect("mongodb+srv://nayanrabiul:14125114@amazona.qpa2qym.mongodb.net/amazona-tailwind-next?retryWrites=true&w=majority");
+  const db = await mongoose.connect("mongodb+srv://nayanrabiul:14125114@amazona.qpa2qym.mongodb.net/green-apparels?retryWrites=true&w=majority");
   console.log('new connection created..');
   connection.isConnected = db.connections[0].readyState;
 }

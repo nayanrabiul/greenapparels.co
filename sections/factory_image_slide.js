@@ -18,30 +18,7 @@ const settings = {
 };
 
 
-const data = [{
-    title: "A WORLD-CLASS GARMENT FACTORY IN BANGLADESH",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/factory/factory_hole.png",
-}, {
-    title: "SEWING FLOOR",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/factory/SEWING_FLOOR.jpg",
-}, {
-    title: "CUTTING FLOOR",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/factory/CUTTING_FLOOR.jpg"
-}, {
-    title: "Sewinig Machine",
-    description: "Short description of the product goes here",
-    link: "",
-    image: "/slide/factory/Sewinig_Machine.jpg"
-},
-
-];
-const Factorys = () => {
+const Factorys = ({data}) => {
     return (<div className="w-full py-8 lg:py-16">
         <Slider {...settings}
         >
@@ -60,9 +37,8 @@ const Factorys = () => {
                         </div>
 
                         <div className="">
-                            <h2 className="mb-2  font-bold tracking-tight text-second">{factory.title}</h2>
-                            <p className="mb-3 font-normal text-third">Here are the biggest
-                                enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <h2 className="mb-2  font-bold tracking-tight text-second">{factory.heading}</h2>
+                            <p className="mb-3 font-normal text-third">{factory.description}</p>
                         </div>
                     </div>
                 </div>

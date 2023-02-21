@@ -57,7 +57,7 @@ const settings = {
     ]
 };
 
-const Clients = () => {
+const Clients = ({data}) => {
     return (
         <div className=" py-8  ">
             <div className=" ">
@@ -65,11 +65,11 @@ const Clients = () => {
 
                 <div className="w-full">
                     <Slider {...settings}>
-                        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((i) => (
+                        {data.map((i) => (
                             <div className="p-4 mb-5" key={i}>
                                 <Image
                                     className="w-full h-[60px] lg:h-[100px] object-contain shadow-lg"
-                                    src={`/clients/${i}.png`}
+                                    src={i.image}
                                     alt="alt"
                                     height={224}
                                     width={224}
