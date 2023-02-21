@@ -11,6 +11,7 @@ import Swot from "../sections/swot";
 import Clients from "../sections/clients";
 import Contactus from "../sections/contactus";
 import Client_think_about_us from "../sections/client_think_about_us";
+import axios from "axios";
 
 
 function Home({datas}) {
@@ -37,12 +38,12 @@ function Home({datas}) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch(process.env.NEXT_PUBLIC_URL + 'api/page?page=all');
-    const data = await res.json();
+    const res = await axios.get(process.env.NEXT_PUBLIC_URL + 'api/page?page=all');
+
 
     return {
         props: {
-            datas: data.data
+            datas: res.data.data
         },
         revalidate: 60 // revalidate every 60 seconds
     }
