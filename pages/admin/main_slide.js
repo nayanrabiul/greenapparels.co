@@ -8,6 +8,7 @@ import Image from 'next/image'
 import FormInput from "../../utils/form/input";
 import ImageInput from "../../utils/form/image";
 import Spinner from "../../utils/spin";
+import {uploadImageImgbb} from "../../utils/image-upload-imbb";
 
 export const postData = data => post('/page', data)
 export const featchData = data => get('/page', data)
@@ -22,15 +23,13 @@ const MainSlide = () => {
 
     const onFinish = async (values) => {
         setSpinModal(true);
-        const data = new FormData()
-        data.append('file', values.image)
-        let url = site_data.backend_url + `/api/pagefile`;
-        const res = await axios.post(url, data, {})
-        values.image = res.data.data;
+        console.log(values);
+        values.image = await uploadImageImgbb(values.image);
+        const payload = {page: 'main_slide', content: [...slides.content, values]}
+        console.log(payload);
+        setSpinModal(false)
 
-        const payload = {page:'main_slide',content:[...slides.content,values]}
-
-        // eslint-disable-next-line react-hooks/rules-of-hooks
+        //eslint-disable-next-line react-hooks/rules-of-hooks
         return useAction(postData, payload, () => {
             console.log('success')
             setModal(false)
@@ -41,15 +40,12 @@ const MainSlide = () => {
     }
 
     const deleteHandle = async (i) => {
-
-
-        const thisArray = slides.content.filter((value, index)=> {
+        const thisArray = slides.content.filter((value, index) => {
             return index !== i;
         });
         console.log(thisArray)
 
-
-        const payload = {page:'main_slide',content:thisArray}
+        const payload = {page: 'main_slide', content: thisArray}
         // eslint-disable-next-line react-hooks/rules-of-hooks
         return useAction(postData, payload, () => {
             console.log('success')
@@ -58,7 +54,7 @@ const MainSlide = () => {
     }
 
     return (<div>
-            <Spinner spinModal={spinModal} />
+            <Spinner spinModal={spinModal}/>
             <Row gutter={8} className={'p-4'}>
                 <Col span={21}></Col>
                 <Col span={3} className={'flex justify-center items-center'}>
@@ -82,20 +78,19 @@ const MainSlide = () => {
                         <Image src={s.image} alt={'fd'} height={300} width={300}/>
                     }</Col>
                     <Col span={3} className={'flex justify-center items-center'}>
-                        <div className={'p-2 bg-red-700 rounded shadow-xl'} onClick={()=>deleteHandle(i)}> Delete</div>
+                        <div className={'p-2 bg-red-700 rounded shadow-xl'} onClick={() => deleteHandle(i)}> Delete
+                        </div>
                     </Col>
                 </Row>
             ))}
 
-            <Modal open={modal} width={999} onCancel={()=>setModal(false)} footer={null}>
+            <Modal open={modal} width={999} onCancel={() => setModal(false)} footer={null}>
 
                 <Form
                     form={form}
                     onFinish={onFinish}
                     layout="vertical"
                 >
-
-
                     <Row gutter={12}>
                         <Col span={5}>
                             <FormInput name={['heading']} textArea
@@ -121,9 +116,7 @@ const MainSlide = () => {
                                  src={images}
                                  alt=""/>
                         </Col>
-
                     </Row>
-
                     <button className={'px-4 py-2 rounded shadow-xl bg-second text-third'}>
                         Save
                     </button>

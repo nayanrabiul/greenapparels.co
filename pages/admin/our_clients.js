@@ -7,6 +7,8 @@ import {site_data} from "../../utils/common";
 import Image from 'next/image'
 import FormInput from "../../utils/form/input";
 import ImageInput from "../../utils/form/image";
+import {uploadImageImgbb} from "../../utils/image-upload-imbb";
+import Spinner from "../../utils/spin";
 
 export const postData = data => post('/page', data)
 export const featchData = data => get('/page', data)
@@ -16,14 +18,13 @@ const OurClients = () => {
     const [form] = Form.useForm()
     const [images, setImages] = useState(null);
     const [modal, setModal] = useState(false);
+    const [spinModal, setSpinModal] = useState(false);
+
 
     const onFinish = async (values) => {
+        setSpinModal(true);
 
-        const data = new FormData()
-        data.append('file', values.image)
-        let url = site_data.backend_url + `/api/pagefile`;
-        const res = await axios.post(url, data, {})
-        values.image = res.data.data;
+        values.image = await uploadImageImgbb(values.image);
 
         const payload = {page: 'our_clients', content: [...slides.content, values]}
 
@@ -34,6 +35,8 @@ const OurClients = () => {
             setModal(false)
             form.resetFields();
             getSlides()
+            setSpinModal(false);
+
         })
     }
 
@@ -56,7 +59,7 @@ const OurClients = () => {
     }
 
     return (<div>
-            {console.log(slides)}
+            <Spinner spinModal={spinModal}/>
             <Row gutter={8} className={'p-4'}>
                 <Col span={21}></Col>
                 <Col span={3} className={'flex justify-center items-center'}>

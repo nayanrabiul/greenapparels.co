@@ -8,6 +8,7 @@ import Image from 'next/image'
 import FormInput from "../../utils/form/input";
 import ImageInput from "../../utils/form/image";
 import Spinner from "../../utils/spin";
+import {uploadImageImgbb} from "../../utils/image-upload-imbb";
 
 export const postData = data => post('/page', data)
 export const featchData = data => get('/page', data)
@@ -20,18 +21,15 @@ const MainSlide = () => {
     const [spinModal, setSpinModal] = useState(false);
 
 
-
     const onFinish = async (values) => {
         setSpinModal(true);
-        const data = new FormData()
-        data.append('file', values.image)
-        let url = site_data.backend_url + `/api/pagefile`;
-        const res = await axios.post(url, data, {})
-        values.image = res.data.data;
 
-        const payload = {page:'products',content:[...slides.content,values]}
 
-        // eslint-disable-next-line react-hooks/rules-of-hooks
+        values.image = await uploadImageImgbb(values.image);
+        const payload = {page: 'products', content: [...slides.content, values]}
+        console.log(payload)
+
+        //eslint-disable-next-line react-hooks/rules-of-hooks
         return useAction(postData, payload, () => {
             console.log('success')
             setModal(false)
@@ -44,12 +42,12 @@ const MainSlide = () => {
     const deleteHandle = async (i) => {
 
 
-        const thisArray = slides.content.filter((value, index)=> {
+        const thisArray = slides.content.filter((value, index) => {
             return index !== i;
         });
         console.log(thisArray)
 
-        const payload = {page:'products',content:thisArray}
+        const payload = {page: 'products', content: thisArray}
         // eslint-disable-next-line react-hooks/rules-of-hooks
         return useAction(postData, payload, () => {
             console.log('success')
@@ -84,12 +82,14 @@ const MainSlide = () => {
                         <Image src={s.image} alt={'fd'} height={300} width={300}/>
                     }</Col>
                     <Col span={3} className={'flex justify-center items-center'}>
-                        <div className={'p-2 bg-red-700 rounded shadow-xl hover-pointer'} onClick={()=>deleteHandle(i)}> Delete</div>
+                        <div className={'p-2 bg-red-700 rounded shadow-xl hover-pointer'}
+                             onClick={() => deleteHandle(i)}> Delete
+                        </div>
                     </Col>
                 </Row>
             ))}
 
-            <Modal open={modal} width={999} onCancel={()=>setModal(false)} footer={null}>
+            <Modal open={modal} width={999} onCancel={() => setModal(false)} footer={null}>
                 <Form
                     form={form}
                     onFinish={onFinish}

@@ -8,6 +8,7 @@ import Image from 'next/image'
 import FormInput from "../../utils/form/input";
 import ImageInput from "../../utils/form/image";
 import Spinner from "../../utils/spin";
+import {uploadImageImgbb} from "../../utils/image-upload-imbb";
 
 export const postData = data => post('/page', data)
 export const featchData = data => get('/page', data)
@@ -22,14 +23,8 @@ const FactoriesSlide = () => {
 
     const onFinish = async (values) => {
         setSpinModal(true)
-        const data = new FormData()
-        data.append('file', values.image)
-        let url = site_data.backend_url + `/api/pagefile`;
-        const res = await axios.post(url, data, {})
-        values.image = res.data.data;
-
+        values.image = await uploadImageImgbb(values.image);
         const payload = {page: 'factories_slide', content: [...slides.content, values]}
-
         console.log(payload)
         // eslint-disable-next-line react-hooks/rules-of-hooks
         return useAction(postData, payload, () => {
