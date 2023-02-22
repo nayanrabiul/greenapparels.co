@@ -37,15 +37,17 @@ function Home({datas}) {
     );
 }
 
-export async function getServerSideProps(){
+export async function getServerSideProps() {
     const res = await axios.get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
+    const data = await res.data.data
 
     return {
         props: {
-            datas: res.data.data
-        }
+            datas: data
+        },
     }
 }
+
 
 
 export default Home;
