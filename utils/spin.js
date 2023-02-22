@@ -1,15 +1,24 @@
 import React from 'react';
-import {Button, Modal, Space, Spin} from 'antd';
+import {Button, Col, Modal, Row, Space, Spin} from 'antd';
 
 
 const Spinner = ({spinModal}) => {
 
     return (
         <>
-            <Modal open={spinModal} footer={false}>\
-                <div className={'flex justify-cent items-center'}>
-                    <Spin size="large"/>
-                </div>
+            <Modal title={"uploading"} open={spinModal} footer={false}>
+                <Row>
+                    <Col span={10}>
+
+                    </Col>
+                    <Col span={4}>
+                        <Spin size="large"/>
+
+                    </Col>
+                    <Col span={10}>
+
+                    </Col>
+                </Row>
             </Modal>
         </>
     );
