@@ -63,6 +63,7 @@ const LandingPage = () => {
         </div>
     )
 };
+LandingPage.auth = { adminOnly: true };
 export default LandingPage;
 
 
