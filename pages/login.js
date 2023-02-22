@@ -35,13 +35,13 @@ export default function LogIn() {
 
     return (
 
-        <div className="grid grid-cols-1 md:grid-cols-2   gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-third">
             <div className=" col-span-1 ">
-                <div className="w-full h-full">
+                <div className="w-full h-full flex justify-center items-center">
                     <Image
-                        src={"/undraw_step_to_the_sun_nxqq.svg"}
-                        width="786"
-                        height="606"
+                        src={"/nav/logo.png"}
+                        width="400"
+                        height="400"
                         objectFit="contain"
                         alt="Brand logo"
                     />
@@ -53,7 +53,7 @@ export default function LogIn() {
                     onSubmit={handleSubmit(submitHandler)}
                 >
                     <h1 className="mb-4 text-4xl">Login</h1>
-                    <div className="mb-4">
+                    <div className="mb-4" >
                         <label htmlFor="email">
                             Email
                             <br/>
@@ -66,7 +66,7 @@ export default function LogIn() {
                                     message: "Please enter valid email",
                                 },
                             })}
-                            className="w-9/12"
+                            className="w-9/12 text-main"
                             id="email"
                             autoFocus
                         ></input>
@@ -84,7 +84,7 @@ export default function LogIn() {
                                     value: 6, message: "password is more than 5 chars",
                                 },
                             })}
-                            className="w-9/12"
+                            className="w-9/12 text-main"
                             id="password"
                             autoFocus
                         ></input>
