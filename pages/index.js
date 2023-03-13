@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from "../components/common/Layout";
 import Slide from "../sections/slide";
 import Whychooseus from "../sections/whychooseus";
@@ -12,42 +12,45 @@ import Clients from "../sections/clients";
 import Contactus from "../sections/contactus";
 import Client_think_about_us from "../sections/client_think_about_us";
 import axios from "axios";
+import {useFetch} from "../utils/hooks";
+import {del, get, post} from "../utils/api_helpers"
 
+const loc = data => get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
+const getContent = (pages, name) => {
 
-function Home({datas}) {
-    const data = (name) => {
-        const sd = datas.filter(data => data.page === name);
-        return sd[0].content;
+    if (pages?.length > 1) {
+        const sd = pages?.filter(page => page.page === name);
+        const page = sd[0].content
+        return page
     }
-
-    return (
-        <Layout>
-            <Slide id={'slide'} data={data('main_slide')}/>
-            <Whychooseus id={'Whychooseus'} data={data('about_us')}/>
-            <Exprience id={'Exprience'} data={data('exprience')}/>
-            <HomeProducts data={data('products')}/>
-            <FactoryDetails />
-            <Factorys id={'Factorys'} data={data('factories_slide')}/>
-            <Csr id={'Csr'} data={data('csr')}/>
-            <Swot id={'Swot'}/>
-            <Clients id={'Clients'} data={data('our_clients')}/>
-            <Contactus id={'Contactus'}/>
-            <Client_think_about_us id={'Client_think_about_us'} data={data('reviews')}/>
-        </Layout>
-    );
+    else return [{}]
 }
 
-export async function getServerSideProps() {
-    const res = await axios.get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
-    const data = await res.data.data
+function Home() {
 
-    return {
-        props: {
-            datas: data
-        },
+    const [pages, getPages] = useFetch(loc)
+
+    if (pages?.length === 0) {
+        return <>...Loading</>
+    } else {
+
+        return (
+
+            <Layout>
+                <Slide id={'slide'} data={getContent(pages, 'main_slide')}/>
+                <Whychooseus id={'Whychooseus'} data={getContent(pages,'about_us')}/>
+                <Exprience id={'Exprience'} data={getContent(pages,'exprience')}/>
+                <HomeProducts data={getContent(pages,'products')}/>
+                <FactoryDetails/>
+                <Factorys id={'Factorys'} data={getContent(pages,'factories_slide')}/>
+                <Csr id={'Csr'} data={getContent(pages,'csr')}/>
+                <Swot id={'Swot'}/>
+                <Clients id={'Clients'} data={getContent(pages,'our_clients')}/>
+                <Contactus id={'Contactus'}/>
+                <Client_think_about_us id={'Client_think_about_us'} data={getContent(pages,'reviews')}/>
+            </Layout>);
     }
 }
-
 
 
 export default Home;

@@ -32,6 +32,7 @@ const dataicon = [
 ];
 
 const Whychooseus = ({data}) => {
+
     return (
         <div className="w-full py-8 md:py-16 lg:py-24" id={'Whychooseus'}>
             <div className="container ">
@@ -42,9 +43,9 @@ const Whychooseus = ({data}) => {
                     viewport={{once: false, amount: 0.1}}
                     className={` mx-auto flex flex-col`}
                 >
-                    <h1 className="text-center text-first pb-4">{data[0].heading}</h1>
+                    <h1 className="text-center text-first pb-4">{data[0]?.heading}</h1>
                     <h4 className={'text-sm md:text-lg lg:text-xl md:w-[70%] mx-auto text-center text-second '}>
-                        {data[0].description}</h4>
+                        {data[0]?.description}</h4>
 
                     <div className="md:px-8 mt-8 flex flex-wrap justify-center">
 
@@ -56,8 +57,8 @@ const Whychooseus = ({data}) => {
                                 width={1}
                                 height={1}
                             />
-                            <h3 className={'text-center text-second'}>{data[1].heading}</h3>
-                            <p className="w-[65%] text-center text-third">{data[1].description}</p>
+                            <h3 className={'text-center text-second'}>{data[1]?.heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[1]?.description}</p>
                         </div>
                         <div className="w-1/2   flex flex-col items-center space-y-4 " >
                             <Image
@@ -67,8 +68,8 @@ const Whychooseus = ({data}) => {
                                 width={1}
                                 height={1}
                             />
-                            <h3 className={'text-center text-second'}>{data[2].heading}</h3>
-                            <p className="w-[65%] text-center text-third">{data[2].description}</p>
+                            <h3 className={'text-center text-second'}>{data[2]?.heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[2]?.description}</p>
                         </div>
                         <div className="w-1/2   flex flex-col items-center space-y-4 " >
                             <Image
@@ -78,8 +79,8 @@ const Whychooseus = ({data}) => {
                                 width={1}
                                 height={1}
                             />
-                            <h3 className={'text-center text-second'}>{data[3].heading}</h3>
-                            <p className="w-[65%] text-center text-third">{data[3].description}</p>
+                            <h3 className={'text-center text-second'}>{data[3]?.heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[3]?.description}</p>
                         </div>
                         <div className="w-1/2   flex flex-col items-center space-y-4 " >
                             <Image
@@ -89,8 +90,8 @@ const Whychooseus = ({data}) => {
                                 width={1}
                                 height={1}
                             />
-                            <h3 className={'text-center text-second'}>{data[4].heading}</h3>
-                            <p className="w-[65%] text-center text-third">{data[4].description}</p>
+                            <h3 className={'text-center text-second'}>{data[4]?.heading}</h3>
+                            <p className="w-[65%] text-center text-third">{data[4]?.description}</p>
                         </div>
 
                     </div>
