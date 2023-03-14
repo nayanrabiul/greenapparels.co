@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Layout from "../components/common/Layout";
 import Slide from "../sections/slide";
 import Whychooseus from "../sections/whychooseus";
@@ -17,37 +17,48 @@ import {del, get, post} from "../utils/api_helpers"
 
 const loc = data => get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
 const getContent = (pages, name) => {
-
     if (pages?.length > 1) {
         const sd = pages?.filter(page => page.page === name);
         const page = sd[0].content
         return page
-    }
-    else return [{}]
+    } else return [{}]
 }
 
-function Home() {
+const Home = () => {
 
-    const [pages, getPages] = useFetch(loc)
+    const [pages, setPages] = useState([])
+
+    async function fetchUserData() {
+        try {
+            const data = await axios.get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all')
+            console.log(data.data.data)
+            setPages(data.data.data)
+
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    useEffect(() => {
+        fetchUserData();
+    }, []);
 
     if (pages?.length === 0) {
         return <>...Loading</>
     } else {
-
         return (
-
             <Layout>
                 <Slide id={'slide'} data={getContent(pages, 'main_slide')}/>
-                <Whychooseus id={'Whychooseus'} data={getContent(pages,'about_us')}/>
-                <Exprience id={'Exprience'} data={getContent(pages,'exprience')}/>
-                <HomeProducts data={getContent(pages,'products')}/>
+                <Whychooseus id={'Whychooseus'} data={getContent(pages, 'about_us')}/>
+                <Exprience id={'Exprience'} data={getContent(pages, 'exprience')}/>
+                <HomeProducts data={getContent(pages, 'products')}/>
                 <FactoryDetails/>
-                <Factorys id={'Factorys'} data={getContent(pages,'factories_slide')}/>
-                <Csr id={'Csr'} data={getContent(pages,'csr')}/>
+                <Factorys id={'Factorys'} data={getContent(pages, 'factories_slide')}/>
+                <Csr id={'Csr'} data={getContent(pages, 'csr')}/>
                 <Swot id={'Swot'}/>
-                <Clients id={'Clients'} data={getContent(pages,'our_clients')}/>
+                <Clients id={'Clients'} data={getContent(pages, 'our_clients')}/>
                 <Contactus id={'Contactus'}/>
-                <Client_think_about_us id={'Client_think_about_us'} data={getContent(pages,'reviews')}/>
+                <Client_think_about_us id={'Client_think_about_us'} data={getContent(pages, 'reviews')}/>
             </Layout>);
     }
 }

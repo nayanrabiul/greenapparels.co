@@ -16,8 +16,8 @@ axiosApi.interceptors.response.use(
 )
 
 export async function get(url, data, config = {}) {
-    axiosApi.defaults.headers.common["Authorization"] = `Bearer ${localStorage.getItem('authToken') ?? ''}`
-    return await axiosApi.get(url, {...config, params: data}).then(response => response.data)
+    // axiosApi.defaults.headers.common["Authorization"] = `Bearer ${localStorage.getItem('authToken') ?? ''}`
+    return await axiosApi.get(url, { params: data}).then(response => response.data)
 }
 
 export async function post(url, data, config = {}) {
