@@ -14,6 +14,7 @@ import Client_think_about_us from "../sections/client_think_about_us";
 import axios from "axios";
 import {useFetch} from "../utils/hooks";
 import {del, get, post} from "../utils/api_helpers"
+import ReactLoading from "react-loading";
 
 const loc = data => get(process.env.NEXT_PUBLIC_URL + '/api/page?page=all');
 const getContent = (pages, name) => {
@@ -44,7 +45,8 @@ const Home = () => {
     }, []);
 
     if (pages?.length === 0) {
-        return <>...Loading</>
+        return <div className={'h-screen flex justify-center items-center'}><ReactLoading type="bubbles" color='#AA8B56'
+                                  height={100} width={50}/></div>
     } else {
         return (
             <Layout>
