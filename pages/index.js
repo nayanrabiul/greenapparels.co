@@ -39,7 +39,6 @@ const Home = () => {
             console.log(e)
         }
     }
-
     useEffect(() => {
         fetchUserData();
     }, []);
